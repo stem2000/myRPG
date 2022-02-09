@@ -310,12 +310,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
+    m_Left: 10
+    m_Right: 50
+    m_Top: 20
+    m_Bottom: 20
   m_ChildAlignment: 0
-  m_Spacing: 0
+  m_Spacing: 5
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -444,7 +444,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2161506824079266396}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.57013965
+  m_Size: 0.5430589
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
