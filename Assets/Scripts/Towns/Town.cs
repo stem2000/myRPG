@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Town : MonoBehaviour
 {
     [SerializeField] public TownPlaces town_places;
+    private List<ItemViewDescription> places_descriptions;
     [SerializeField] GameObject scrollView; 
     [SerializeField] GameObject contentPanel;
     
@@ -15,16 +16,30 @@ public class Town : MonoBehaviour
             return FILENAME;}
 
 
-    public void OnMouseDown() {
-        openScrollView();}
+    private void OnMouseDown() {
+        OpenScrollView();}
 
 
-    public void openScrollView(){ 
-        scrollView.gameObject.SetActive(true);}
+    private void OpenScrollView(){ 
+        scrollView.gameObject.SetActive(true);
+        scrollView.GetComponent<ScrollViewFunctional>().LoadItems(places_descriptions);}
 
 
     public void SetPlaces(TownPlaces tPlaces){ 
-        town_places = tPlaces;}
+        town_places = tPlaces;
+        places_descriptions = GenerateItemViewList(town_places);}
+
+
+    private List<ItemViewDescription> GenerateItemViewList(TownPlaces places){
+        if(places.places == null || places.places.Count == 0)
+            return null;
+
+        List<ItemViewDescription> itemViews = new List<ItemViewDescription>();
+        foreach(TownPlace place in places.places){
+            itemViews.Add(new ItemViewDescription(place.placeName,place.placeImage));
+        }
+        return itemViews;
+    }
 }
 
 
@@ -32,7 +47,7 @@ public class Town : MonoBehaviour
 public struct TownPlace
 {
      [SerializeField]public string placeName;
-     [SerializeField]public string placePict;
+     [SerializeField]public string placeImage;
 }
 
 

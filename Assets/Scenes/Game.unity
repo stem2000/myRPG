@@ -483,7 +483,7 @@ MonoBehaviour:
     places:
     - placeName: "\u0422\u0430\u0432\u0435\u0440\u043D\u0430 \"\u0416\u0435\u043D\u0449\u0438\u043D\u044B
         \u0438 \u0412\u0438\u043D\u043E\""
-      placePict: qweqwe
+      placeImage: Tavern
   scrollView: {fileID: 1361809678}
   contentPanel: {fileID: 1273166930}
 --- !u!1001 &1231885559
@@ -500,6 +500,10 @@ PrefabInstance:
     - target: {fileID: 4106566231096252950, guid: 33a39564aabefcb48b20beca6b0a3f00, type: 3}
       propertyPath: m_Name
       value: testTown
+      objectReference: {fileID: 0}
+    - target: {fileID: 4106566231096252950, guid: 33a39564aabefcb48b20beca6b0a3f00, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5909607191307509477, guid: 33a39564aabefcb48b20beca6b0a3f00, type: 3}
       propertyPath: scrollView
@@ -781,9 +785,12 @@ MonoBehaviour:
   fileName: Doradur.json
   placesToCreate:
     places:
-    - placeName: "\u0414\u043E\u0440\u0430\u0434\u0443\u0440"
-      placePict: qweqwe
-  flagCreation: 0
+    - placeName: "\u0422\u0430\u0432\u0435\u0440\u043D\u0430 \"\u0416\u0435\u043D\u0449\u0438\u043D\u044B
+        \u0438 \u0412\u0438\u043D\u043E\""
+      placeImage: Tavern
+    - placeName: "\u0413\u043E\u0440\u043E\u0434\u0441\u043A\u0430\u044F \u043F\u043B\u043E\u0449\u0430\u0434\u044C"
+      placeImage: VillagePlace
+  flagCreation: 1
 --- !u!4 &1772855121
 Transform:
   m_ObjectHideFlags: 0
