@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
-public class ScrollViewFunctional : MonoBehaviour
+public class ScrollViewAdapter : MonoBehaviour
 {
 
     public RectTransform prefab;
@@ -21,7 +21,9 @@ public class ScrollViewFunctional : MonoBehaviour
             Destroy(child.gameObject);}}
 
     private void InitializeItemView(GameObject itemView, ItemViewDescription itemDescription){
-        itemView.GetComponentInChildren<Text>().text = itemDescription.text;
+        itemView.transform.Find("ItemName").GetComponentInChildren<Text>().text = itemDescription.name;
+        itemView.transform.Find("ItemDescription").GetComponentInChildren<Text>().text = itemDescription.description;
+
         try{
             itemView.transform.Find("ItemImage").GetComponent<Image>().sprite = Resources.Load<Sprite>(itemDescription.imagePath);}
         catch(Exception e){
@@ -35,11 +37,13 @@ public class ScrollViewFunctional : MonoBehaviour
 
 public class ItemViewDescription
 {
-    public string text;
+    public string name;
     public string imagePath; 
+    public string description;
 
-    public ItemViewDescription(string text, string imagePath){
-        this.text = text;
+    public ItemViewDescription(string name, string imagePath, string description){
+        this.name = name;
         this.imagePath = imagePath;
+        this.description = description;
     }
 }

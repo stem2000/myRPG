@@ -22,7 +22,7 @@ public class Town : MonoBehaviour
 
     private void OpenScrollView(){ 
         scrollView.gameObject.SetActive(true);
-        scrollView.GetComponent<ScrollViewFunctional>().LoadItems(places_descriptions);}
+        scrollView.GetComponent<ScrollViewAdapter>().LoadItems(places_descriptions);}
 
 
     public void SetPlaces(TownPlaces tPlaces){ 
@@ -31,12 +31,13 @@ public class Town : MonoBehaviour
 
 
     private List<ItemViewDescription> GenerateItemViewList(TownPlaces places){
-        if(places.places == null || places.places.Count == 0)
-            return null;
-
         List<ItemViewDescription> itemViews = new List<ItemViewDescription>();
-        foreach(TownPlace place in places.places){
-            itemViews.Add(new ItemViewDescription(place.placeName,place.placeImage));
+
+        if(places.placesList == null || places.placesList.Count == 0)
+            return itemViews;
+
+        foreach(TownPlace place in places.placesList){
+            itemViews.Add(new ItemViewDescription(place.placeName,place.placeImage,place.placeDescription));
         }
         return itemViews;
     }
@@ -48,15 +49,16 @@ public struct TownPlace
 {
      [SerializeField]public string placeName;
      [SerializeField]public string placeImage;
+     [SerializeField]public string placeDescription;
 }
 
 
 [System.Serializable]
 public struct TownPlaces
 { 
-    [SerializeField]public List<TownPlace> places;
+    [SerializeField]public List<TownPlace> placesList;
 
     public TownPlaces(List<TownPlace> places){ 
-        this.places = places;}
+        this.placesList = places;}
 }
 

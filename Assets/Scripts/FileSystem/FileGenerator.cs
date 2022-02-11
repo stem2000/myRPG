@@ -4,7 +4,7 @@ using UnityEngine;
 using System.IO;
 using System;
 
-public class JsonGeneration : MonoBehaviour
+public class FileGenerator : MonoBehaviour
 {
     public string fileName = "Doradur.json";
     public TownPlaces placesToCreate;

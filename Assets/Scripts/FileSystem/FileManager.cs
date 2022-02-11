@@ -4,7 +4,7 @@ using UnityEngine;
 using System.IO;
 using System;
 
-public class ObjectFileManager : MonoBehaviour
+public class FileManager : MonoBehaviour
 {
     [SerializeField] private List<Town> allTowns;
     public void Start() {
@@ -21,6 +21,7 @@ public class ObjectFileManager : MonoBehaviour
 
         string savePath = Path.Combine(Application.dataPath,fileName);
         string json = JsonUtility.ToJson(placesForSave,true);
+        
         try{
             File.WriteAllText(savePath,json);}
         catch(Exception e){ 

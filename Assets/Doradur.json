@@ -1,0 +1,14 @@
+{
+    "placesList": [
+        {
+            "placeName": "Таверна \"Женщины и Вино\"",
+            "placeImage": "Tavern",
+            "placeDescription": "На двери висит табличка с надписью: \"Со своим нельзя.\""
+        },
+        {
+            "placeName": "Городская площадь",
+            "placeImage": "VillagePlace",
+            "placeDescription": "Центральная площадь небольшого городка.\nНичего примечательного."
+        }
+    ]
+}
