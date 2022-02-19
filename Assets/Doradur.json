@@ -3,12 +3,14 @@
         {
             "placeName": "Таверна \"Женщины и Вино\"",
             "placeImage": "Tavern",
-            "placeDescription": "На двери висит табличка с надписью: \"Со своим нельзя.\""
+            "placeDescription": "В таверне женщины и вино.",
+            "placeID": "tvern"
         },
         {
             "placeName": "Городская площадь",
             "placeImage": "VillagePlace",
-            "placeDescription": "Центральная площадь небольшого городка.\nНичего примечательного."
+            "placeDescription": "Центральная городская площадь. Таверна \"Женщины и Вино\" прямо до первого перекрестка и направо.",
+            "placeID": "plcvlg"
         }
     ]
 }

@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 6713346061102990084}
   - component: {fileID: 4406064222831818144}
   - component: {fileID: 6168075697551676075}
+  - component: {fileID: 5258534075321909699}
   m_Layer: 5
   m_Name: SrolItem
   m_TagString: Untagged
@@ -300,6 +301,19 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
+--- !u!114 &5258534075321909699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5670505253705284239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8e341f6698cd1458463d591ef3524c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 
 --- !u!1 &7570349007414260709
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,7 +348,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.19500001, y: 0.68100005}
   m_AnchorMax: {x: 0.19500001, y: 0.68100005}
-  m_AnchoredPosition: {x: 254.43019, y: -62.339}
+  m_AnchoredPosition: {x: 260, y: -62.339}
   m_SizeDelta: {x: 510.8705, y: 86.678}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5608693220578320832

@@ -8,19 +8,23 @@ public class FileManager : MonoBehaviour
 {
     [SerializeField] private List<Town> allTowns;
     public void Start() {
+
+    string townPlace = String.Empty;
+
         foreach(Town town in allTowns){ 
-            town.SetPlaces(LoadPlacesFromFile(town.GetFileName()));}}
+            townPlace = LoadFromFile(town.GetFileName());
+            town.SetPlaces(ConvertJsonToTownPlaces(townPlace));}}
 
 
     public void OnApplicationQuit() {
         foreach(Town town in allTowns){ 
-            SavePlacesToFile(town.town_places,town.GetFileName());}}
+            SaveToFile(town.town_places,town.GetFileName());}}
 
 
-    public void SavePlacesToFile(TownPlaces placesForSave, string fileName){ 
+    public void SaveToFile(System.Object dataForSave, string fileName){ 
 
         string savePath = Path.Combine(Application.dataPath,fileName);
-        string json = JsonUtility.ToJson(placesForSave,true);
+        string json = JsonUtility.ToJson(dataForSave,true);
         
         try{
             File.WriteAllText(savePath,json);}
@@ -28,23 +32,27 @@ public class FileManager : MonoBehaviour
             Debug.Log("<color=red>FileSaveError: </color>ObjectFileManager => SavePlacesToFile():" + e.Message);}}
 
    
-    public TownPlaces LoadPlacesFromFile(string fileName){ 
+    public String LoadFromFile(string fileName){ 
 
         string savePath = Path.Combine(Application.dataPath,fileName);
 
         if(!File.Exists(savePath)){ 
             Debug.Log("<color=red>FileNotFound:</color>ObjectFileManager => LoadPlacesFromFile():" + fileName);
-                return new TownPlaces(null);}
+                return String.Empty;}
 
         try{
             string json = File.ReadAllText(savePath);
-            TownPlaces placesList = JsonUtility.FromJson<TownPlaces>(json);
-                return placesList;}
+                return json;}
         catch(Exception e){ 
             Debug.Log("<color=red>FileSaveError: </color>ObjectFileManager => LoadPlacesFromFile():" + e.Message);
-            return new TownPlaces(null);}}
+            return String.Empty;}}
 
 
+    public TownPlaces ConvertJsonToTownPlaces(string json){
+        if(json != String.Empty){
+            TownPlaces placesList = JsonUtility.FromJson<TownPlaces>(json);
+                return placesList;}
+        return new TownPlaces(null);}
 
 
 

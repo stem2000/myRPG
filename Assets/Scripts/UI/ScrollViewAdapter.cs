@@ -23,6 +23,7 @@ public class ScrollViewAdapter : MonoBehaviour
     private void InitializeItemView(GameObject itemView, ItemViewDescription itemDescription){
         itemView.transform.Find("ItemName").GetComponentInChildren<Text>().text = itemDescription.name;
         itemView.transform.Find("ItemDescription").GetComponentInChildren<Text>().text = itemDescription.description;
+        itemView.transform.GetComponent<ItemInfo>().itemId = itemDescription.id;
 
         try{
             itemView.transform.Find("ItemImage").GetComponent<Image>().sprite = Resources.Load<Sprite>(itemDescription.imagePath);}
@@ -40,10 +41,12 @@ public class ItemViewDescription
     public string name;
     public string imagePath; 
     public string description;
+    public string id;
 
-    public ItemViewDescription(string name, string imagePath, string description){
+    public ItemViewDescription(string name, string imagePath, string description, string id){
         this.name = name;
         this.imagePath = imagePath;
         this.description = description;
+        this.id = id;
     }
 }

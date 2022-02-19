@@ -37,7 +37,7 @@ public class Town : MonoBehaviour
             return itemViews;
 
         foreach(TownPlace place in places.placesList){
-            itemViews.Add(new ItemViewDescription(place.placeName,place.placeImage,place.placeDescription));
+            itemViews.Add(new ItemViewDescription(place.placeName,place.placeImage,place.placeDescription,place.placeID));
         }
         return itemViews;
     }
@@ -50,6 +50,7 @@ public struct TownPlace
      [SerializeField]public string placeName;
      [SerializeField]public string placeImage;
      [SerializeField]public string placeDescription;
+     [SerializeField]public string placeID;
 }
 
 
