@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 541366607}
   - component: {fileID: 541366606}
   m_Layer: 0
-  m_Name: ObjectManager
+  m_Name: FileManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -352,8 +352,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf855a053756a9d4ebde2a09859f74bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allTowns:
-  - {fileID: 968151055}
 --- !u!4 &541366607
 Transform:
   m_ObjectHideFlags: 0
@@ -479,8 +477,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd2b254801ca9fd4093fdb6d012c79de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  town_places:
-    placesList: []
+  objectManager: {fileID: 2141704195}
+  fileName: Doradur.json
   scrollView: {fileID: 1361809678}
   contentPanel: {fileID: 1273166930}
 --- !u!1001 &1231885559
@@ -761,7 +759,7 @@ GameObject:
   - component: {fileID: 1772855121}
   - component: {fileID: 1772855120}
   m_Layer: 0
-  m_Name: ObjectGenerator
+  m_Name: FileGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -781,21 +779,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fileName: Doradur.json
   placesToCreate:
-    placesList:
-    - placeName: "\u0422\u0430\u0432\u0435\u0440\u043D\u0430 \"\u0416\u0435\u043D\u0449\u0438\u043D\u044B
+    objectsList:
+    - name: "\u0422\u0430\u0432\u0435\u0440\u043D\u0430 \"\u0416\u0435\u043D\u0449\u0438\u043D\u044B
         \u0438 \u0412\u0438\u043D\u043E\""
-      placeImage: Tavern
-      placeDescription: "\u041D\u0430 \u0434\u0432\u0435\u0440\u0438 \u0432\u0438\u0441\u0438\u0442
-        \u0442\u0430\u0431\u043B\u0438\u0447\u043A\u0430 \u0441 \u043D\u0430\u0434\u043F\u0438\u0441\u044C\u044E:
-        \"\u0421\u043E \u0441\u0432\u043E\u0438\u043C \u043D\u0435\u043B\u044C\u0437\u044F.\""
-      placeID: tvern
-    - placeName: "\u0413\u043E\u0440\u043E\u0434\u0441\u043A\u0430\u044F \u043F\u043B\u043E\u0449\u0430\u0434\u044C"
-      placeImage: VillagePlace
-      placeDescription: "\u0426\u0435\u043D\u0442\u0440\u0430\u043B\u044C\u043D\u0430\u044F
-        \u043F\u043B\u043E\u0449\u0430\u0434\u044C \u043D\u0435\u0431\u043E\u043B\u044C\u0448\u043E\u0433\u043E
-        \u0433\u043E\u0440\u043E\u0434\u043A\u0430. \u041D\u0438\u0447\u0435\u0433\u043E
-        \u043F\u0440\u0438\u043C\u0435\u0447\u0430\u0442\u0435\u043B\u044C\u043D\u043E\u0433\u043E."
-      placeID: plcvlg
+      imagePath: Tavern
+      description: "\u0412 \u0442\u0430\u0432\u0435\u0440\u043D\u0435 \u0436\u0435\u043D\u0449\u0438\u043D\u044B
+        \u0438 \u0432\u0438\u043D\u043E"
+      filename: Qvak
   flagCreation: 0
 --- !u!4 &1772855121
 Transform:
@@ -810,6 +800,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2141704194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2141704196}
+  - component: {fileID: 2141704195}
+  m_Layer: 0
+  m_Name: ObjectManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2141704195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141704194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef5c5b00ded3c4a43a845e0cbf499e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fileManager: {fileID: 541366606}
+  towns:
+  - {fileID: 968151055}
+  ItemsInfo: []
+--- !u!4 &2141704196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2141704194}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.52269876, y: 0.15646857, z: -0.66562957}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2161506825714817246
 PrefabInstance:

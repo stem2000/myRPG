@@ -7,7 +7,7 @@ using System;
 public class FileGenerator : MonoBehaviour
 {
     public string fileName = "Doradur.json";
-    public TownPlaces placesToCreate;
+    public ItemsInfo placesToCreate;
     public bool flagCreation = true;
     public void Start()
     {   

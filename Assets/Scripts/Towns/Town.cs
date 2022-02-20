@@ -5,15 +5,22 @@ using UnityEngine.UI;
 
 public class Town : MonoBehaviour
 {
-    [SerializeField] public TownPlaces town_places;
-    private List<ItemViewDescription> places_descriptions;
-    [SerializeField] GameObject scrollView; 
-    [SerializeField] GameObject contentPanel;
-    
-    public const string FILENAME = "Doradur.json";
+    [SerializeField] public List<TownPlace> townPlaces;
+    [SerializeField] private ObjectManager objectManager;
+    public string fileName = "";
+    private List<ItemInfo> places_descriptions;
 
+    [SerializeField] GameObject scrollView; 
+    private ScrollViewAdapter scrollViewAdapter;
+    [SerializeField] GameObject contentPanel;
+
+
+    void Start(){
+        scrollViewAdapter = scrollView.GetComponent<ScrollViewAdapter>();
+        townPlaces = new List<TownPlace>();}
+    
     public string GetFileName(){ 
-            return FILENAME;}
+            return fileName;}
 
 
     private void OnMouseDown() {
@@ -22,44 +29,22 @@ public class Town : MonoBehaviour
 
     private void OpenScrollView(){ 
         scrollView.gameObject.SetActive(true);
-        scrollView.GetComponent<ScrollViewAdapter>().LoadItems(places_descriptions);}
+        scrollViewAdapter.LoadItems(GetItems());}
 
 
-    public void SetPlaces(TownPlaces tPlaces){ 
-        town_places = tPlaces;
-        places_descriptions = GenerateItemViewList(town_places);}
+    public void SetPlaces(ItemsInfo places){ 
+        foreach(ItemInfo tPlace in places.objectsList){
+            townPlaces.Add(new TownPlace(tPlace));}}
 
+        
+    public ItemsInfo GetItems(){
+        ItemsInfo items;
+        items.objectsList = new List<ItemInfo>();
+        foreach(TownPlace item in townPlaces){
+            items.objectsList.Add(item.GetItemInfo());}
+        return items;}
 
-    private List<ItemViewDescription> GenerateItemViewList(TownPlaces places){
-        List<ItemViewDescription> itemViews = new List<ItemViewDescription>();
-
-        if(places.placesList == null || places.placesList.Count == 0)
-            return itemViews;
-
-        foreach(TownPlace place in places.placesList){
-            itemViews.Add(new ItemViewDescription(place.placeName,place.placeImage,place.placeDescription,place.placeID));
-        }
-        return itemViews;
-    }
 }
 
 
-[System.Serializable]
-public struct TownPlace
-{
-     [SerializeField]public string placeName;
-     [SerializeField]public string placeImage;
-     [SerializeField]public string placeDescription;
-     [SerializeField]public string placeID;
-}
-
-
-[System.Serializable]
-public struct TownPlaces
-{ 
-    [SerializeField]public List<TownPlace> placesList;
-
-    public TownPlaces(List<TownPlace> places){ 
-        this.placesList = places;}
-}
 

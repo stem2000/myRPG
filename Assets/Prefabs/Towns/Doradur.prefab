@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5923509384231185225}
   - component: {fileID: 5909607191307509477}
   m_Layer: 0
-  m_Name: Town_1
+  m_Name: Doradur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,6 +127,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   town_places:
-    places: []
+    creaturesList: []
+  people:
+    creaturesList: []
+  fileName: Doradur.json
   scrollView: {fileID: 0}
   contentPanel: {fileID: 0}

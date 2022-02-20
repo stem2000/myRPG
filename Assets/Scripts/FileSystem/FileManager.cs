@@ -6,21 +6,6 @@ using System;
 
 public class FileManager : MonoBehaviour
 {
-    [SerializeField] private List<Town> allTowns;
-    public void Start() {
-
-    string townPlace = String.Empty;
-
-        foreach(Town town in allTowns){ 
-            townPlace = LoadFromFile(town.GetFileName());
-            town.SetPlaces(ConvertJsonToTownPlaces(townPlace));}}
-
-
-    public void OnApplicationQuit() {
-        foreach(Town town in allTowns){ 
-            SaveToFile(town.town_places,town.GetFileName());}}
-
-
     public void SaveToFile(System.Object dataForSave, string fileName){ 
 
         string savePath = Path.Combine(Application.dataPath,fileName);
@@ -48,11 +33,11 @@ public class FileManager : MonoBehaviour
             return String.Empty;}}
 
 
-    public TownPlaces ConvertJsonToTownPlaces(string json){
+    public ItemsInfo ConvertJsonToItemsInfo(string json){
         if(json != String.Empty){
-            TownPlaces placesList = JsonUtility.FromJson<TownPlaces>(json);
+            ItemsInfo placesList = JsonUtility.FromJson<ItemsInfo>(json);
                 return placesList;}
-        return new TownPlaces(null);}
+        return new ItemsInfo(new List<ItemInfo>());}
 
 
 
