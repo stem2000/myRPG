@@ -2,18 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TownPlace
+public class TownPlace: MonoBehaviour, IItemBasicFunctional
 {
-    private ItemInfo placeInfo;
+    private ItemInfo itemInfo;
+    [HideInInspector] public List<QuestGiver> questGivers;
+    public QuestGiver QuestGiverPrefab;
 
-    public TownPlace(ItemInfo placeInfo){
-        this.placeInfo = placeInfo;}
+    void Start(){
+        questGivers = new List<QuestGiver>();}
 
-    public void SetItemInfo(ItemInfo placeInfo){
-        this.placeInfo = placeInfo;}
+    public TownPlace(ItemInfo itemInfo){
+        this.itemInfo = itemInfo;}
+
+
+    public void SetItemInfo(ItemInfo itemInfo){
+        this.itemInfo = itemInfo;}
+
 
     public ItemInfo GetItemInfo(){
-        return placeInfo;}
+        return itemInfo;}
 
-    
+
+    public void SetQuestGivers(ItemsInfo places){ 
+        QuestGiver qGiver = null;
+        foreach(ItemInfo itemInfo in places.objectsList){
+            qGiver = GameObject.Instantiate(QuestGiverPrefab);
+            qGiver.SetItemInfo(itemInfo);
+            questGivers.Add(qGiver);}}
 }

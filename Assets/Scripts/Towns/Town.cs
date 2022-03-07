@@ -6,21 +6,19 @@ using UnityEngine.UI;
 public class Town : MonoBehaviour
 {
     [SerializeField] public List<TownPlace> townPlaces;
-    [SerializeField] private ObjectManager objectManager;
-    public string fileName = "";
-    private List<ItemInfo> places_descriptions;
-
     [SerializeField] GameObject scrollView; 
+    [SerializeField] private TownPlace townPlacePrefab;
+    public string placesFileLocation = "";
+    private List<ItemInfo> places_descriptions;
     private ScrollViewAdapter scrollViewAdapter;
-    [SerializeField] GameObject contentPanel;
 
 
     void Start(){
-        scrollViewAdapter = scrollView.GetComponent<ScrollViewAdapter>();
         townPlaces = new List<TownPlace>();}
     
-    public string GetFileName(){ 
-            return fileName;}
+
+    public string GetPlacesFileLocation(){ 
+            return placesFileLocation;}
 
 
     private void OnMouseDown() {
@@ -33,18 +31,25 @@ public class Town : MonoBehaviour
 
 
     public void SetPlaces(ItemsInfo places){ 
-        foreach(ItemInfo tPlace in places.objectsList){
-            townPlaces.Add(new TownPlace(tPlace));}}
+        TownPlace tPlace = null;
+        foreach(ItemInfo itemInfo in places.objectsList){
+            tPlace = GameObject.Instantiate(townPlacePrefab);
+            tPlace.SetItemInfo(itemInfo);
+            townPlaces.Add(tPlace);}}
 
         
     public ItemsInfo GetItems(){
         ItemsInfo items;
         items.objectsList = new List<ItemInfo>();
-        foreach(TownPlace item in townPlaces){
-            items.objectsList.Add(item.GetItemInfo());}
+        foreach(TownPlace tPlace in townPlaces){
+            items.objectsList.Add(tPlace.GetItemInfo());}
         return items;}
-
 }
+
+
+interface IItemBasicFunctional{
+    public void SetItemInfo(ItemInfo itemInfo);
+    public ItemInfo GetItemInfo();}
 
 
 

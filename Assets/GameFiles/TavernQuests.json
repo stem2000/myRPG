@@ -1,0 +1,12 @@
+{
+    "objectsList": [
+        {
+            "name": "Костус",
+            "imagePath": "Kostus",
+            "description": "Зажиточный дворянин. Любитель посмотреть скоморошьи бои. Не инвестирует в дерьмо.",
+            "filename": "Kostus",
+            "id": "KSTS",
+            "type": "Man"
+        }
+    ]
+}

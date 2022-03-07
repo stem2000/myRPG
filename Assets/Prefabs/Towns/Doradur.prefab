@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4106566231096252947}
   - component: {fileID: 4106566231096252944}
   - component: {fileID: 5923509384231185225}
-  - component: {fileID: 5909607191307509477}
   m_Layer: 0
   m_Name: Doradur
   m_TagString: Untagged
@@ -114,22 +113,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4106566231096252950}
   m_CullTransparentMesh: 1
---- !u!114 &5909607191307509477
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4106566231096252950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd2b254801ca9fd4093fdb6d012c79de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  town_places:
-    creaturesList: []
-  people:
-    creaturesList: []
-  fileName: Doradur.json
-  scrollView: {fileID: 0}
-  contentPanel: {fileID: 0}

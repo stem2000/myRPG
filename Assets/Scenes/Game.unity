@@ -215,6 +215,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1361809679}
+  - {fileID: 1856614822}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -477,10 +478,124 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd2b254801ca9fd4093fdb6d012c79de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  townPlaces: []
   objectManager: {fileID: 2141704195}
-  fileName: Doradur.json
   scrollView: {fileID: 1361809678}
-  contentPanel: {fileID: 1273166930}
+  townPlacePrefab: {fileID: 3596828779238904604, guid: 563d930b8094eca42a546ee1ea336654, type: 3}
+  placesFileLocation: Doradur.json
+--- !u!1001 &1053532593
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 62506343}
+    m_Modifications:
+    - target: {fileID: 2161506824079266396, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824079266396, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264144, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_Name
+      value: QuestGiverView
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264144, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1039.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 857.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9720
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 960
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -524
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824580753993, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -817.49
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
 --- !u!1001 &1231885559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -500,10 +615,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5909607191307509477, guid: 33a39564aabefcb48b20beca6b0a3f00, type: 3}
-      propertyPath: scrollView
-      value: 
-      objectReference: {fileID: 1361809678}
     - target: {fileID: 8533609855385164992, guid: 33a39564aabefcb48b20beca6b0a3f00, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -588,9 +699,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4106566231096252945, guid: 33a39564aabefcb48b20beca6b0a3f00, type: 3}
-    - {fileID: 5909607191307509477, guid: 33a39564aabefcb48b20beca6b0a3f00, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33a39564aabefcb48b20beca6b0a3f00, type: 3}
 --- !u!1 &1265205000
 GameObject:
@@ -658,11 +767,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1273166930 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2161506824580753992, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
-  m_PrefabInstance: {fileID: 2161506825714817246}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1361809678 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2161506824392264144, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
@@ -777,15 +881,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41adc735582cfa14db576e9db993052a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileName: Doradur.json
+  fileName: TavernQuests.json
   placesToCreate:
     objectsList:
-    - name: "\u0422\u0430\u0432\u0435\u0440\u043D\u0430 \"\u0416\u0435\u043D\u0449\u0438\u043D\u044B
-        \u0438 \u0412\u0438\u043D\u043E\""
-      imagePath: Tavern
-      description: "\u0412 \u0442\u0430\u0432\u0435\u0440\u043D\u0435 \u0436\u0435\u043D\u0449\u0438\u043D\u044B
-        \u0438 \u0432\u0438\u043D\u043E"
-      filename: Qvak
+    - name: "\u041A\u043E\u0441\u0442\u0443\u0441"
+      imagePath: Kostus
+      description: "\u0417\u0430\u0436\u0438\u0442\u043E\u0447\u043D\u044B\u0439
+        \u0434\u0432\u043E\u0440\u044F\u043D\u0438\u043D. \u041B\u044E\u0431\u0438\u0442\u0435\u043B\u044C
+        \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C \u0441\u043A\u043E\u043C\u043E\u0440\u043E\u0448\u044C\u0438
+        \u0431\u043E\u0438. \u041D\u0435 \u0438\u043D\u0432\u0435\u0441\u0442\u0438\u0440\u0443\u0435\u0442
+        \u0432 \u0434\u0435\u0440\u044C\u043C\u043E."
+      filename: Kostus
+      id: KSTS
+      type: Man
   flagCreation: 0
 --- !u!4 &1772855121
 Transform:
@@ -801,6 +909,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &1856614822 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+  m_PrefabInstance: {fileID: 1053532593}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2141704194
 GameObject:
   m_ObjectHideFlags: 0
@@ -833,7 +946,7 @@ MonoBehaviour:
   fileManager: {fileID: 541366606}
   towns:
   - {fileID: 968151055}
-  ItemsInfo: []
+  scrollView: {fileID: 1361809678}
 --- !u!4 &2141704196
 Transform:
   m_ObjectHideFlags: 0
@@ -873,7 +986,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2161506824392264144, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
       propertyPath: m_Name
-      value: ScrollView
+      value: GeneralScrollView
       objectReference: {fileID: 0}
     - target: {fileID: 2161506824392264144, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
       propertyPath: m_IsActive
