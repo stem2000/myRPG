@@ -7,21 +7,21 @@ using System;
 public class ScrollViewAdapter : MonoBehaviour
 {
 
-    public RectTransform prefab;
+    public ItemView prefab;
     public RectTransform content;
-    public static event getItems getObjectsFromOM;
 
-
-    public static void FillScrollView(string id){
-        getObjectsFromOM?.Invoke(id);}
-
+    [SerializeField] private Animator svAnimator;
 
     public void LoadItems(ItemsInfo items){
+        svAnimator.SetBool("openScroll",true);
+        var abc = svAnimator.GetBool("openScroll");
+        Debug.Log("LoadItems");
         DestroyItems();
         foreach(ItemInfo item in items.objectsList){
-            var itemView = GameObject.Instantiate(prefab.gameObject) as GameObject;
-            itemView.transform.SetParent(content,false);
-            itemView.GetComponent<ItemView>().InitializeItemView(item);}}//GetComponent???
+            ItemView itemView = GameObject.Instantiate(prefab);
+            itemView.gameObject.transform.SetParent(content,false);
+            itemView.InitializeItemView(item);}
+            Debug.Log("ItemInitialization");}//GetComponent???
 
     private void DestroyItems(){
         foreach(Transform child in content){
@@ -30,9 +30,3 @@ public class ScrollViewAdapter : MonoBehaviour
 
 }
 
-static class ItemViewTypes{
-     public const string Place = "Place";
-     public const string QuestGiver = "QuestGiver";
-}
-
-public delegate ItemsInfo getItems(string id);

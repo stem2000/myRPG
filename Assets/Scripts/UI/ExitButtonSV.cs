@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ExitButtonSV : MonoBehaviour
 {
-    [SerializeField] private GameObject scrollView;
+    [SerializeField] private Animator svAnimator;
 
     public void closeScrollView(){ 
-        scrollView.gameObject.SetActive(false);}
+        svAnimator.SetBool("openScroll",false);}
 }

@@ -479,10 +479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   townPlaces: []
-  objectManager: {fileID: 2141704195}
-  scrollView: {fileID: 1361809678}
-  townPlacePrefab: {fileID: 3596828779238904604, guid: 563d930b8094eca42a546ee1ea336654, type: 3}
-  placesFileLocation: Doradur.json
+  objectId: Doradur.json
 --- !u!1001 &1053532593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -777,6 +774,36 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
   m_PrefabInstance: {fileID: 2161506825714817246}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1361809680 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9088491902006264213, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+  m_PrefabInstance: {fileID: 2161506825714817246}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361809678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50fc2c19345827846ae95349f41bc673, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1361809681
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1361809678}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0d2e5cfae1ec9f041bccfd911b1b4ff8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1614055263
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,10 +970,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef5c5b00ded3c4a43a845e0cbf499e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  townPlacePrefab: {fileID: 3596828779238904604, guid: 563d930b8094eca42a546ee1ea336654, type: 3}
   fileManager: {fileID: 541366606}
   towns:
   - {fileID: 968151055}
-  scrollView: {fileID: 1361809678}
+  getObjectsFromOM:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1361809680}
+        m_TargetAssemblyTypeName: ScrollViewAdapter, Assembly-CSharp
+        m_MethodName: LoadItems
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &2141704196
 Transform:
   m_ObjectHideFlags: 0
@@ -970,19 +1012,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2161506824079266396, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2161506824079266396, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2161506824079266396, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.42986035
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2161506824392264141, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
       propertyPath: m_ScrollSensitivity
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2161506824392264142, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2161506824392264144, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
       propertyPath: m_Name
@@ -990,7 +1036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2161506824392264144, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
       propertyPath: m_Pivot.x
@@ -1062,7 +1108,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -524
+      value: -505
       objectReference: {fileID: 0}
     - target: {fileID: 2161506824392264145, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1078,7 +1124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2161506824580753993, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 646.51
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2161506825112451556, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -1100,6 +1146,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: closeScrollView
       objectReference: {fileID: 0}
+    - target: {fileID: 2937698355884440562, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: svAnimator
+      value: 
+      objectReference: {fileID: 1361809681}
     - target: {fileID: 5061107829677291906, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1260,5 +1310,13 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -846
       objectReference: {fileID: 0}
+    - target: {fileID: 9088491902006264213, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: prefab
+      value: 
+      objectReference: {fileID: 1189234707522923228, guid: 253484af6a41f3740ad23b88662c8067, type: 3}
+    - target: {fileID: 9088491902006264213, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
+      propertyPath: svAnimator
+      value: 
+      objectReference: {fileID: 1361809681}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}

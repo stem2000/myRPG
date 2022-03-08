@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 316042170077471560}
   - component: {fileID: 7671608131579387523}
   - component: {fileID: 3480204789875344947}
-  - component: {fileID: 7289949425386852395}
   m_Layer: 5
   m_Name: ItemButton
   m_TagString: Untagged
@@ -122,18 +121,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7289949425386852395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 13825755209478353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ba01e461618d454c9a3169807208bfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1454892041537546521
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,6 +212,7 @@ GameObject:
   - component: {fileID: 6713346061102990084}
   - component: {fileID: 4406064222831818144}
   - component: {fileID: 6168075697551676075}
+  - component: {fileID: 1189234707522923228}
   m_Layer: 5
   m_Name: SrolItem
   m_TagString: Untagged
@@ -313,6 +301,18 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
+--- !u!114 &1189234707522923228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5670505253705284239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c125390ac2cf91d4897cfedc307ee6ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7570349007414260709
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,40 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System;
 public class Town : MonoBehaviour
 {
     [SerializeField] public List<TownPlace> townPlaces;
-    [SerializeField] GameObject scrollView; 
-    [SerializeField] private TownPlace townPlacePrefab;
-    public string placesFileLocation = "";
-    private List<ItemInfo> places_descriptions;
-    private ScrollViewAdapter scrollViewAdapter;
+    public string objectId = String.Empty;
 
 
     void Start(){
         townPlaces = new List<TownPlace>();}
-    
 
-    public string GetPlacesFileLocation(){ 
-            return placesFileLocation;}
-
-
-    private void OnMouseDown() {
-        OpenScrollView();}
-
-
-    private void OpenScrollView(){ 
-        scrollView.gameObject.SetActive(true);
-        scrollViewAdapter.LoadItems(GetItems());}
-
-
-    public void SetPlaces(ItemsInfo places){ 
-        TownPlace tPlace = null;
-        foreach(ItemInfo itemInfo in places.objectsList){
-            tPlace = GameObject.Instantiate(townPlacePrefab);
-            tPlace.SetItemInfo(itemInfo);
-            townPlaces.Add(tPlace);}}
+    public void OnMouseDown(){
+        Debug.Log("TownButton activated");
+        ObjectManager.LoadItemsAtScrollView(objectId);}
 
         
     public ItemsInfo GetItems(){
