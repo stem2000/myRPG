@@ -4,9 +4,9 @@ using UnityEngine;
 using System.IO;
 using System;
 
-public class FileManager : MonoBehaviour
+public class FileManager
 {
-    public void SaveToFile(System.Object dataForSave, string fileName){ 
+    public static void SaveToFile(System.Object dataForSave, string fileName){ 
 
         string savePath = Path.Combine(Application.dataPath,fileName);
         string json = JsonUtility.ToJson(dataForSave,true);
@@ -17,7 +17,7 @@ public class FileManager : MonoBehaviour
             Debug.Log("<color=red>FileSaveError: </color>ObjectFileManager => SavePlacesToFile():" + e.Message);}}
 
    
-    public String LoadFromFile(string fileName){ 
+    public static String LoadFromFile(string fileName){ 
 
         string savePath = Path.Combine(Application.dataPath,fileName);
 
@@ -33,11 +33,11 @@ public class FileManager : MonoBehaviour
             return String.Empty;}}
 
 
-    public ItemsInfo ConvertJsonToItemsInfo(string json){
+    public static ItemInfo ConvertJsonToItemInfo(string json){
         if(json != String.Empty){
-            ItemsInfo placesList = JsonUtility.FromJson<ItemsInfo>(json);
-                return placesList;}
-        return new ItemsInfo(new List<ItemInfo>());}
+            ItemInfo objectDescription = JsonUtility.FromJson<ItemInfo>(json);
+                return objectDescription;}
+        return new ItemInfo();}
 
 
 

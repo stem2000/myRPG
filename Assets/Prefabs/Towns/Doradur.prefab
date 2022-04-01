@@ -12,6 +12,10 @@ GameObject:
   - component: {fileID: 4106566231096252947}
   - component: {fileID: 4106566231096252944}
   - component: {fileID: 5923509384231185225}
+  - component: {fileID: 2937607877205572128}
+  - component: {fileID: -3001859983969955567}
+  - component: {fileID: -8526411185735784818}
+  - component: {fileID: -7248547481761926403}
   m_Layer: 0
   m_Name: Doradur
   m_TagString: Untagged
@@ -113,3 +117,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4106566231096252950}
   m_CullTransparentMesh: 1
+--- !u!114 &2937607877205572128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4106566231096252950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea4df6c1b7d97b41b70a34bd8d2885b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectDescription:
+    name: 
+    imagePath: 
+    description: 
+    filename: Doradur.json
+    id: 
+    type: 
+--- !u!114 &-3001859983969955567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4106566231096252950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b785cbc468794944da1494088b62156b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8526411185735784818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4106566231096252950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd2b254801ca9fd4093fdb6d012c79de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  townPlaces: []
+--- !u!114 &-7248547481761926403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4106566231096252950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef5c5b00ded3c4a43a845e0cbf499e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollViewAdapter: {fileID: 0}

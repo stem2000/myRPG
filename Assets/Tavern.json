@@ -1,0 +1,8 @@
+{
+    "name": "Таверна \"Женщины и вино\"",
+    "imagePath": "Tavern",
+    "description": "В таверне женщины и вино",
+    "filename": "Tavern.json",
+    "id": "TWV",
+    "type": "Place"
+}

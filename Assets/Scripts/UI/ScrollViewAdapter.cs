@@ -12,18 +12,16 @@ public class ScrollViewAdapter : MonoBehaviour
 
     [SerializeField] private Animator svAnimator;
 
-    public void LoadItems(ItemsInfo items){
+    public void LoadItems(List<Tuple<ItemInfo,UIConnector>> items, UIConnector realObject){
         svAnimator.SetBool("openScroll",true);
         var abc = svAnimator.GetBool("openScroll");
-        Debug.Log("LoadItems");
         DestroyItems();
-        foreach(ItemInfo item in items.objectsList){
+        foreach(Tuple<ItemInfo,UIConnector> item in items){
             ItemView itemView = GameObject.Instantiate(prefab);
             itemView.gameObject.transform.SetParent(content,false);
-            itemView.InitializeItemView(item);}
-            Debug.Log("ItemInitialization");}//GetComponent???
+            itemView.InitializeItemView(item.Item1,item.Item2);}}
 
-    private void DestroyItems(){
+    public void DestroyItems(){
         foreach(Transform child in content){
             Destroy(child.gameObject);}}
 

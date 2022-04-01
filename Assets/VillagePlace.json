@@ -1,0 +1,8 @@
+{
+    "name": "Городская площадь",
+    "imagePath": "VillagePlace",
+    "description": "Таверна \"Женщины и Вино\" прямо до перекрестка и направо.",
+    "filename": "VillagePlace.json",
+    "id": "VP",
+    "type": "Place"
+}

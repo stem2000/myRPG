@@ -1,20 +1,8 @@
 {
-    "objectsList": [
-        {
-            "name": "Таверна \"Женщины и Вино\"",
-            "imagePath": "Tavern",
-            "description": "В таверне женщины и вино",
-            "filename": "TavernQuests.json",
-            "id": "TWV",
-            "type": "Place"
-        },
-        {
-            "name": "Городская площадь",
-            "imagePath": "VillagePlace",
-            "description": "Таверна \"Женщины и Вино\" прямо до перекрестка и направо.",
-            "filename": "VillageQuests.json",
-            "id": "VP",
-            "type": "Place"
-        }
-    ]
+    "name": "",
+    "imagePath": "",
+    "description": "",
+    "filename": "Doradur.json",
+    "id": "",
+    "type": ""
 }

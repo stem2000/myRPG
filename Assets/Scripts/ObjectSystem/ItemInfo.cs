@@ -22,12 +22,3 @@ public struct ItemInfo
 
 }
 
-[System.Serializable]
-public struct ItemsInfo
-{ 
-    [SerializeField]public List<ItemInfo> objectsList;
-
-    public ItemsInfo(List<ItemInfo> objects){ 
-        this.objectsList = objects;}
-}
-
