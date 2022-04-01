@@ -385,6 +385,17 @@ PrefabInstance:
       objectReference: {fileID: 1361809680}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3be90e17882554f42b47f9677c788a84, type: 3}
+--- !u!114 &514112843 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6076308883825772351, guid: 5380f6944ae08cd4bb0c54593e435337, type: 3}
+  m_PrefabInstance: {fileID: 1820511500}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0d5316992ff3044a7d7bde7f45cde7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &607691069 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2937698355884440562, guid: 48353c6bd507d52439421d8faeb8f9fe, type: 3}
@@ -401,6 +412,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 486686033319796941, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
   m_PrefabInstance: {fileID: 850898849}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &752184883 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
+  m_PrefabInstance: {fileID: 850898849}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f06d055b1c82549aef8ad0dbc5a4ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &782070641
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,8 +450,8 @@ Transform:
   m_LocalPosition: {x: 0.38574734, y: 0.21378364, z: -9.239692}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1546162634}
   - {fileID: 1820511501}
+  - {fileID: 1546162634}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -595,7 +617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   townPlaces:
-  - {fileID: 0}
+  - {fileID: 514112843}
   - {fileID: 1546162638}
 --- !u!1001 &1053532593
 PrefabInstance:
@@ -1063,9 +1085,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 782070642}
     m_Modifications:
+    - target: {fileID: 6076308883825772351, guid: 5380f6944ae08cd4bb0c54593e435337, type: 3}
+      propertyPath: persons.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6076308883825772351, guid: 5380f6944ae08cd4bb0c54593e435337, type: 3}
+      propertyPath: persons.Array.data[0]
+      value: 
+      objectReference: {fileID: 752184883}
     - target: {fileID: 6467412101208663301, guid: 5380f6944ae08cd4bb0c54593e435337, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6467412101208663301, guid: 5380f6944ae08cd4bb0c54593e435337, type: 3}
       propertyPath: m_LocalPosition.x
