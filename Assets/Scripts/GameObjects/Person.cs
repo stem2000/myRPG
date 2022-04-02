@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Person : MonoBehaviour
 {
-
+        [SerializeField] public Dialogue thisPersonDialogue;
 }

@@ -51,7 +51,7 @@ public class ItemView : MonoBehaviour
             break;
             case ItemViewTypes.Man:
                 itemButtonText.text = "Говорить";
-                itemButton.onClick.AddListener(() => realObject.LoadItemsAtScrollView());
+                itemButton.onClick.AddListener(() => realObject.OpenDialogueViewFromPerson());
             break;
             default:
                 itemButtonText.text = "";

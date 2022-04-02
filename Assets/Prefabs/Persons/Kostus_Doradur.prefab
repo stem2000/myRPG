@@ -82,6 +82,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollViewAdapter: {fileID: 0}
+  dialogueViewAdapter: {fileID: 0}
 --- !u!114 &737395465063467414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,3 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f06d055b1c82549aef8ad0dbc5a4ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisPersonDialogue:
+    nodes: []
+    npcName: 
+    currentNode: 0

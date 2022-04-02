@@ -10,11 +10,8 @@ public class ScrollViewAdapter : MonoBehaviour
     public ItemView prefab;
     public RectTransform content;
 
-    [SerializeField] private Animator svAnimator;
-
     public void LoadItems(List<Tuple<ItemInfo,UIConnector>> items, UIConnector realObject){
-        svAnimator.SetBool("openScroll",true);
-        var abc = svAnimator.GetBool("openScroll");
+        this.gameObject.GetComponent<GenScrollViewAnimator>().openScrollView();
         DestroyItems();
         foreach(Tuple<ItemInfo,UIConnector> item in items){
             ItemView itemView = GameObject.Instantiate(prefab);
