@@ -7,9 +7,9 @@ public class DialogueViewAdapter : MonoBehaviour
 {
     public RectTransform answersTextContent;
     public RectTransform dialogTextContent;
-    private Dialogue dialogue;
     [SerializeField] private AnswerItem prefabAnwerItem;
     [SerializeField] private DialogueTextItem prefabDialogTextItem;
+    private Dialogue dialogue;
 
     public void OpenDialogView(){
         this.gameObject.GetComponent<DialogueViewAnimator>().openDialogueView();}
@@ -22,46 +22,35 @@ public class DialogueViewAdapter : MonoBehaviour
         RefreshAnswerPanel();}
 
     private void RefreshDialoguePanelFromNPC(){
-        string textForNpc = string.Empty;
-
         if(dialogue.GetActualDescription() != string.Empty){
-            DialogueTextItem decription = GameObject.Instantiate(prefabDialogTextItem);
-            decription.gameObject.transform.SetParent(dialogTextContent,false);
-            string textForDescription = string.Empty;
-
-            textForDescription += "\t" + dialogue.GetActualDescription();
-            decription.InitializeDialogueTextItem(textForDescription);}
-
-        DialogueTextItem dialogueTI = GameObject.Instantiate(prefabDialogTextItem);
-        dialogueTI.gameObject.transform.SetParent(dialogTextContent,false);
-        textForNpc += "\t" + dialogue.npcName + ": " + dialogue.GetActualNpcText();
-        dialogueTI.InitializeDialogueTextItem(textForNpc);}  
+           AddDescription();}
+        AddNpcText();}  
 
 
-    public void RefreshDialogueTextFromUserAnswer(string answerText){
+    public void AddAnswerTextToDialoguePanel(string answerText){
         string textForDTI = string.Empty;
         DialogueTextItem dialogueTI = GameObject.Instantiate(prefabDialogTextItem);
         dialogueTI.gameObject.transform.SetParent(dialogTextContent,false);
         dialogueTI.InitializeDialogueTextItem("\t" + "Я: " + answerText );}
 
 
-    public void GoToNextNode(int nextNode){
+    public void dlfGoToNextNode(int nextNode,bool dialend){
         dialogue.currentNode = nextNode;
+        if(dialend == true){
+            EndDialogue();
+            return;}
         RefreshDialoguePanelFromNPC();
-         RefreshAnswerPanel();}
+        RefreshAnswerPanel();}
 
 
     public void RefreshAnswerPanel(){
-        DestroysAnswers();
+        DestroyAnswers();
         Answer[] actualAnswers = dialogue.GetActualAnswers();
-
         foreach(Answer answer in actualAnswers){
-            AnswerItem anwerItem = GameObject.Instantiate(prefabAnwerItem);
-            anwerItem.gameObject.transform.SetParent(answersTextContent,false);
-            anwerItem.InitializeAnwerItem(answer);}}
+            AddAnswer(answer);}}
 
 
-    public void DestroysAnswers(){
+    public void DestroyAnswers(){
         foreach(Transform child in answersTextContent){
             Destroy(child.gameObject);}}
 
@@ -73,11 +62,38 @@ public class DialogueViewAdapter : MonoBehaviour
 
     public void ClearDialogView(){
         DestroyDialogText();
-        DestroysAnswers();}
+        DestroyAnswers();}
 
 
     public void RefreshDialogView(){
         RefreshDialoguePanelFromNPC();
         RefreshAnswerPanel();}   
 
+
+    public void EndDialogue(){
+        ClearDialogView();
+        this.gameObject.GetComponent<DialogueViewAnimator>().closeDialogueView();}
+
+
+    public void AddDescription(){
+            DialogueTextItem description = GameObject.Instantiate(prefabDialogTextItem);
+            description.gameObject.transform.SetParent(dialogTextContent,false);
+            string textForDescription = string.Empty;
+            textForDescription += "\t<color=grey>" + dialogue.GetActualDescription() + "</color>";
+            description.InitializeDialogueTextItem(textForDescription);}
+
+
+    public void AddNpcText(){
+        string textForNpc = string.Empty;
+        DialogueTextItem dialogueTI = GameObject.Instantiate(prefabDialogTextItem);
+        dialogueTI.gameObject.transform.SetParent(dialogTextContent,false);
+        textForNpc += "\t" + dialogue.npcName + ": " + dialogue.GetActualNpcText();
+        dialogueTI.InitializeDialogueTextItem(textForNpc);}
+
+
+    public void AddAnswer(Answer answer){
+        AnswerItem anwerItem = GameObject.Instantiate(prefabAnwerItem);
+        anwerItem.gameObject.transform.SetParent(answersTextContent,false);
+        anwerItem.InitializeAnwerItem(answer);}
 }
+

@@ -95,7 +95,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f06d055b1c82549aef8ad0dbc5a4ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisPersonDialogue:
-    nodes: []
-    npcName: 
-    currentNode: 0
+  xmlDialog: {fileID: 4900000, guid: 254b207a0e4e43644be6ac589d7ec4da, type: 3}

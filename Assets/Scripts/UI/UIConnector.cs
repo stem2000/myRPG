@@ -19,8 +19,7 @@ public class UIConnector : MonoBehaviour
 
     public void RefreshDialogFromAnswerButton(){
         Answer currentAnswer = this.gameObject.GetComponent<AnswerItem>().answer;
-        dialogueViewAdapter.RefreshDialogueTextFromUserAnswer(currentAnswer.textAnswer);
-        dialogueViewAdapter.GoToNextNode(currentAnswer.nextNode);
-        dialogueViewAdapter.RefreshAnswerPanel();}
+        dialogueViewAdapter.AddAnswerTextToDialoguePanel(currentAnswer.textAnswer);
+        dialogueViewAdapter.dlfGoToNextNode(currentAnswer.nextNode, currentAnswer.dialend);}
 
 }

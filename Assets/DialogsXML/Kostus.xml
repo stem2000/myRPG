@@ -1,0 +1,27 @@
+<dialogue>
+    <node>
+        <description>За столом сидит серьезный человек.</description>
+        <npctext>Чего надо?</npctext>
+        <answers>
+            <answer tonode = '1'><text>Привет, есть ли у тебя работа для меня?</text></answer>
+            <answer tonode = '2'><text>Нет, ничего...</text></answer>
+        </answers>
+    </node>
+     <node>
+        <description></description>
+        <npctext>Работка найдется.</npctext>
+        <answers>
+            <answer tonode = '0'><text>Хорошо, тогда я возьмусь.</text><dialend>true</dialend></answer>
+            <answer tonode = '0'><text>Я передумал.</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+     <node>
+        <description>Костус слегка поморщился.</description>
+        <npctext>Тогда нам не о чем говорить.</npctext>
+        <answers>
+            <answer tonode = '0'><text>Пока.</text><dialend>true</dialend></answer>
+        </answers>
+    </node>
+    <npcname>Костус</npcname>
+    <curnode>0</curnode>
+</dialogue>

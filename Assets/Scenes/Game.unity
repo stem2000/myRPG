@@ -910,6 +910,10 @@ PrefabInstance:
         \u043D\u0430\u0440\u044B\u0432\u0430\u0435\u0448\u044C\u0441\u044F?"
       objectReference: {fileID: 0}
     - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
+      propertyPath: thisPersonDialogue.nodes.Array.data[2].npcText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
       propertyPath: thisPersonDialogue.nodes.Array.data[0].textDesctiption
       value: "\u0417\u0430 \u0441\u0442\u043E\u043B\u043E\u043C \u0441\u0438\u0434\u0438\u0442
         \u0441\u0435\u0440\u044C\u0435\u0437\u043D\u044B\u0439 \u043C\u0443\u0436\u0447\u0438\u043D\u0430.
@@ -923,12 +927,20 @@ PrefabInstance:
         \u0438\u0437-\u0437\u0430 \u0441\u0442\u043E\u043B\u0430"
       objectReference: {fileID: 0}
     - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
+      propertyPath: thisPersonDialogue.nodes.Array.data[2].textDesctiption
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
       propertyPath: thisPersonDialogue.nodes.Array.data[0].playerAnswers.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
       propertyPath: thisPersonDialogue.nodes.Array.data[1].playerAnswers.Array.size
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
+      propertyPath: thisPersonDialogue.nodes.Array.data[2].playerAnswers.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
       propertyPath: thisPersonDialogue.nodes.Array.data[0].playerAnswers.Array.data[0].nextNode
@@ -936,11 +948,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
       propertyPath: thisPersonDialogue.nodes.Array.data[0].playerAnswers.Array.data[0].speakEnd
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
       propertyPath: thisPersonDialogue.nodes.Array.data[0].playerAnswers.Array.data[1].speakEnd
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
       propertyPath: thisPersonDialogue.nodes.Array.data[0].playerAnswers.Array.data[2].speakEnd
@@ -955,11 +967,23 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
+      propertyPath: thisPersonDialogue.nodes.Array.data[1].playerAnswers.Array.data[1].nextNode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
       propertyPath: thisPersonDialogue.nodes.Array.data[1].playerAnswers.Array.data[1].speakEnd
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
       propertyPath: thisPersonDialogue.nodes.Array.data[1].playerAnswers.Array.data[2].speakEnd
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
+      propertyPath: thisPersonDialogue.nodes.Array.data[2].playerAnswers.Array.data[0].speakEnd
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
+      propertyPath: thisPersonDialogue.nodes.Array.data[2].playerAnswers.Array.data[1].speakEnd
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
@@ -972,8 +996,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
       propertyPath: thisPersonDialogue.nodes.Array.data[0].playerAnswers.Array.data[2].textAnswer
-      value: "\u0421\u043B\u044B\u0448\u0430\u043B \u044D\u0442\u0443 \u043F\u0430\u0441\u0442\u0443
-        \u0443\u0436\u0435..."
+      value: "\u0417\u0430\u043A\u043E\u043D\u0447\u0438\u0442\u044C \u0434\u0438\u0430\u043B\u043E\u0433."
       objectReference: {fileID: 0}
     - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
       propertyPath: thisPersonDialogue.nodes.Array.data[1].playerAnswers.Array.data[0].textAnswer
@@ -981,12 +1004,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
       propertyPath: thisPersonDialogue.nodes.Array.data[1].playerAnswers.Array.data[1].textAnswer
-      value: "\u0410 \u0447\u0442\u043E \u0442\u0430\u043A\u043E\u0435, \u043C\u0443\u0436\u0438\u043A?"
+      value: "\u041D\u0435\u0442, \u0434\u0430\u0432\u0430\u0439 \u0437\u0430\u043A\u043E\u043D\u0447\u0438\u043C..."
       objectReference: {fileID: 0}
     - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
       propertyPath: thisPersonDialogue.nodes.Array.data[1].playerAnswers.Array.data[2].textAnswer
       value: "\u0421\u043B\u044B\u0448\u0430\u043B \u044D\u0442\u0443 \u043F\u0430\u0441\u0442\u0443
         \u0443\u0436\u0435..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
+      propertyPath: thisPersonDialogue.nodes.Array.data[2].playerAnswers.Array.data[0].textAnswer
+      value: "\u0414\u0430!!!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 737395465063467414, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
+      propertyPath: thisPersonDialogue.nodes.Array.data[2].playerAnswers.Array.data[1].textAnswer
+      value: "\u041D\u0435\u0442, \u0434\u0430\u0432\u0430\u0439 \u0437\u0430\u043A\u043E\u043D\u0447\u0438\u043C..."
       objectReference: {fileID: 0}
     - target: {fileID: 2368481527235465663, guid: df88313cfcdada645818e9808d41d2a9, type: 3}
       propertyPath: m_Name
