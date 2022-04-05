@@ -15,7 +15,7 @@ public class FileManager
         try{
             File.WriteAllText(savePath,json);}
         catch(Exception e){ 
-            Debug.Log("<color=red>FileSaveError: </color>ObjectFileManager => SavePlacesToFile():" + e.Message);}}
+            Debug.Log("<color=red>FileSaveError: </color>FileManager => SaveToFile():" + e.Message);}}
 
    
     public static String LoadFromFile(string fileName){ 
@@ -23,14 +23,14 @@ public class FileManager
         string savePath = Path.Combine(Application.dataPath,fileName);
 
         if(!File.Exists(savePath)){ 
-            Debug.Log("<color=red>FileNotFound:</color>ObjectFileManager => LoadPlacesFromFile():" + fileName);
+            Debug.Log("<color=red>FileNotFound:</color>FileManager => LoadFromFile():" + fileName);
                 return String.Empty;}
 
         try{
             string json = File.ReadAllText(savePath);
                 return json;}
         catch(Exception e){ 
-            Debug.Log("<color=red>FileSaveError: </color>ObjectFileManager => LoadPlacesFromFile():" + e.Message);
+            Debug.Log("<color=red>FileSaveError: </color>FileManager => LoadFromFile():" + e.Message);
             return String.Empty;}}
 
 
@@ -41,11 +41,15 @@ public class FileManager
         return new ItemInfo();}
 
 
-    public static Dialogue Load(TextAsset _xml){
-        XmlSerializer serializer = new XmlSerializer(typeof(Dialogue));
-        StringReader reader = new StringReader(_xml.text);
-        Dialogue dialogue = serializer.Deserialize(reader) as Dialogue;
-        return dialogue;}
+    public static Dialogue LoadXML(TextAsset _xml){
+        try{
+            XmlSerializer serializer = new XmlSerializer(typeof(Dialogue));
+            StringReader reader = new StringReader(_xml.text);
+            Dialogue dialogue = serializer.Deserialize(reader) as Dialogue;
+            return dialogue;}
+        catch(Exception e){ 
+            Debug.Log("<color=red>XMLReadError: </color>FileManager => LoadXML():" + e.Message);
+            return new Dialogue();}}
 
 
 

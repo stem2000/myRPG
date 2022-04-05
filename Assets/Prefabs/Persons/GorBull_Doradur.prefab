@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2368481527235465663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 486686033319796941}
+  - component: {fileID: -6031971263217443188}
+  - component: {fileID: 1412247830864936721}
+  - component: {fileID: 5264228204313614251}
+  - component: {fileID: 737395465063467414}
+  m_Layer: 0
+  m_Name: GorBull_Doradur
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &486686033319796941
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2368481527235465663}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.38574734, y: 0.21378364, z: -9.239692}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-6031971263217443188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2368481527235465663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cea4df6c1b7d97b41b70a34bd8d2885b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectDescription:
+    name: "\u0413\u043E\u0440 \"\u0411\u044B\u043A\""
+    imagePath: GorBull
+    description: "\u0412\u044B\u0448\u0438\u0431\u0430\u043B\u0430 \u043D\u0430 \u0441\u043A\u043E\u043C\u043E\u0440\u043E\u0448\u044C\u0438\u0445
+      \u0431\u043E\u044F\u0445 \u041D\u0438\u043A\u0447\u0430. \u041B\u0443\u0447\u0448\u0435
+      \u043D\u0435 \u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C \u043D\u0430
+      \u043D\u0435\u0433\u043E \u043A\u043E\u0441\u043E."
+    filename: GorBull.json
+    id: GRBL
+    type: Man
+--- !u!114 &1412247830864936721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2368481527235465663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b785cbc468794944da1494088b62156b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5264228204313614251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2368481527235465663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef5c5b00ded3c4a43a845e0cbf499e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scrollViewAdapter: {fileID: 0}
+  dialogueViewAdapter: {fileID: 0}
+--- !u!114 &737395465063467414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2368481527235465663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f06d055b1c82549aef8ad0dbc5a4ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xmlDialog: {fileID: 4900000, guid: 254b207a0e4e43644be6ac589d7ec4da, type: 3}

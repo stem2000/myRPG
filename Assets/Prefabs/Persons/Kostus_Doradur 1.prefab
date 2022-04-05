@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5264228204313614251}
   - component: {fileID: 737395465063467414}
   m_Layer: 0
-  m_Name: Kostus_Doradur
+  m_Name: Kostus_Doradur 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

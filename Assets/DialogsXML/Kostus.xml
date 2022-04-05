@@ -1,5 +1,5 @@
 <dialogue>
-    <node>
+    <node><!-- node 0 begin-->
         <description>За столом сидит серьезный человек.</description>
         <npctext>Чего надо?</npctext>
         <answers>
@@ -8,9 +8,8 @@
                 <text>Привет, есть ли у тебя работа для меня?</text>
                 <questname>KostusQuest1</questname>
             </answer>
-             <answer tonode = '4'>
+             <answer tonode = '3' questvalue = '3'>
                 <needquestvalue>2</needquestvalue> 
-                <questvalue>3</questvalue>
                 <text>Сделал я твою работу</text>
                 <questname>KostusQuest1</questname>
             </answer>
@@ -19,21 +18,19 @@
             </answer>
         </answers>
     </node>
-     <node>
-        <npctext>Работка найдется.</npctext>
+     <node><!-- node 1 begin-->
+        <npctext>Работа? Хмммм, а подойди-ка ты к Гору "Быку" и попроси его вернуть мне долг.</npctext>
         <answers>
-            <answer tonode = '0' questvalue = '1'>
-                <text>Хорошо, тогда я возьмусь.</text>
-                <dialend>true</dialend>
+            <answer tonode = '4' questvalue = '1'>
+                <text>Хорошо, я возьмусь.</text>
                 <questname>KostusQuest1</questname>
             </answer>
-            <answer tonode = '0'>
+            <answer tonode = '2'>
                 <text>Я передумал.</text>
-                <dialend>true</dialend>
             </answer>
         </answers>
     </node>
-     <node>
+     <node><!-- node 2 begin-->
         <description>Костус слегка поморщился.</description>
         <npctext>Тогда нам не о чем говорить.</npctext>
         <answers>
@@ -43,14 +40,22 @@
             </answer>
         </answers>
     </node>
-     <node>
-        <npctext>Хорошо, а ты не совсем дурак.</npctext>
+     <node><!-- node 3 begin-->
+        <npctext>Хорошо, можеть быть ты не такой дурак, каким выглядишь.</npctext>
         <answers>
             <answer tonode = '0'>
-                <needquestvalue>3</needquestvalue>
-                <text>Хорошо, тогда я возьмусь.</text>
+                <text>Спасибо.</text>
                 <dialend>true</dialend>
-                <questname>KostusQuest1</questname>
+            </answer>
+        </answers>
+    </node>
+    <node><!-- node 4 begin-->
+        <description>Костус ехидно улыбнулся.</description>
+        <npctext>Ну давай.</npctext>
+        <answers>
+            <answer tonode = '0'>
+                <text>Отойти от Костуса.</text>
+                <dialend>true</dialend>
             </answer>
         </answers>
     </node>

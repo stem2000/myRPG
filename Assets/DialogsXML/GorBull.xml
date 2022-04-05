@@ -1,0 +1,29 @@
+<dialogue>
+    <node><!-- node 0 begin-->
+        <description>Здоровенный громила оглядывается по сторонам чуть пошатываясь. Возможно он сильно пьян.</description>
+        <npctext>Ты кто такой?</npctext>
+        <answers>
+            <answer tonode = '1' questvalue = '2'>
+                <needquestvalue>1</needquestvalue> 
+                <text>Привет, "Бык". Я от Костуса, пришел за деньгами, которые ты ему должен.</text>
+                <questname>KostusQuest1</questname>
+            </answer>
+            <answer tonode = '0'>
+                <text>Отойти...</text>
+                <dialend>true</dialend>
+            </answer>
+        </answers>
+    </node>
+    <node><!-- node 1 begin-->
+        <description>Гор "Бык" слегка подался вперед.</description>
+        <npctext>Забирай свои деньги и проваливай.</npctext>
+        <answers>
+            <answer tonode = '0'>
+                <text>Спасибо.</text>
+                <dialend>true</dialend>
+            </answer>
+        </answers>
+    </node>
+    <npcname>Гор "Бык"</npcname>
+    <curnode>0</curnode>
+</dialogue>

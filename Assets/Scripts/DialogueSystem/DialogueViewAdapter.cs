@@ -11,6 +11,9 @@ public class DialogueViewAdapter : MonoBehaviour
     [SerializeField] private DialogueTextItem prefabDialogTextItem;
     private Dialogue dialogue;
 
+
+    public void RebuildAnswerLayout(){
+        LayoutRebuilder.ForceRebuildLayoutImmediate(answersTextContent);}
     public void OpenDialogView(){
         this.gameObject.GetComponent<DialogueViewAnimator>().openDialogueView();}
 
@@ -45,7 +48,8 @@ public class DialogueViewAdapter : MonoBehaviour
     
     public void dlfAddQuestValueToPlayerPrefs(Answer answer){
         if(answer.needquestvalue == PlayerPrefs.GetInt(answer.questname)){
-            PlayerPrefs.SetInt(answer.questname,answer.questvalue);}}
+            PlayerPrefs.SetInt(answer.questname,answer.questvalue);}
+            Debug.Log("Questname - " + answer.questname + " Playerprefs - " +  PlayerPrefs.GetInt(answer.questname));}
 
 
     public void RefreshAnswerPanel(){
@@ -53,7 +57,8 @@ public class DialogueViewAdapter : MonoBehaviour
         Answer[] actualAnswers = dialogue.GetActualAnswers();
         foreach(Answer answer in actualAnswers){
             if(answer.questname == null || answer.needquestvalue == PlayerPrefs.GetInt(answer.questname)){
-                AddAnswer(answer);}}}
+                AddAnswer(answer);}}
+        RebuildAnswerLayout();}
 
 
     public void DestroyAnswers(){
@@ -98,8 +103,8 @@ public class DialogueViewAdapter : MonoBehaviour
 
 
     public void AddAnswer(Answer answer){
-        AnswerItem anwerItem = GameObject.Instantiate(prefabAnwerItem);
-        anwerItem.gameObject.transform.SetParent(answersTextContent,false);
-        anwerItem.InitializeAnwerItem(answer);}
+        AnswerItem answerItem = GameObject.Instantiate(prefabAnwerItem);
+        answerItem.gameObject.transform.SetParent(answersTextContent,false);
+        answerItem.InitializeAnwerItem(answer);}
 }
 
