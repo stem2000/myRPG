@@ -3,23 +3,55 @@
         <description>За столом сидит серьезный человек.</description>
         <npctext>Чего надо?</npctext>
         <answers>
-            <answer tonode = '1'><text>Привет, есть ли у тебя работа для меня?</text></answer>
-            <answer tonode = '2'><text>Нет, ничего...</text></answer>
+            <answer tonode = '1'>
+                <needquestvalue>0</needquestvalue> 
+                <text>Привет, есть ли у тебя работа для меня?</text>
+                <questname>KostusQuest1</questname>
+            </answer>
+             <answer tonode = '4'>
+                <needquestvalue>2</needquestvalue> 
+                <questvalue>3</questvalue>
+                <text>Сделал я твою работу</text>
+                <questname>KostusQuest1</questname>
+            </answer>
+            <answer tonode = '2'>
+                <text>Нет, ничего...</text>
+            </answer>
         </answers>
     </node>
      <node>
-        <description></description>
         <npctext>Работка найдется.</npctext>
         <answers>
-            <answer tonode = '0'><text>Хорошо, тогда я возьмусь.</text><dialend>true</dialend></answer>
-            <answer tonode = '0'><text>Я передумал.</text><dialend>true</dialend></answer>
+            <answer tonode = '0' questvalue = '1'>
+                <text>Хорошо, тогда я возьмусь.</text>
+                <dialend>true</dialend>
+                <questname>KostusQuest1</questname>
+            </answer>
+            <answer tonode = '0'>
+                <text>Я передумал.</text>
+                <dialend>true</dialend>
+            </answer>
         </answers>
     </node>
      <node>
         <description>Костус слегка поморщился.</description>
         <npctext>Тогда нам не о чем говорить.</npctext>
         <answers>
-            <answer tonode = '0'><text>Пока.</text><dialend>true</dialend></answer>
+            <answer tonode = '0'>
+                <text>Пока.</text>
+                <dialend>true</dialend>
+            </answer>
+        </answers>
+    </node>
+     <node>
+        <npctext>Хорошо, а ты не совсем дурак.</npctext>
+        <answers>
+            <answer tonode = '0'>
+                <needquestvalue>3</needquestvalue>
+                <text>Хорошо, тогда я возьмусь.</text>
+                <dialend>true</dialend>
+                <questname>KostusQuest1</questname>
+            </answer>
         </answers>
     </node>
     <npcname>Костус</npcname>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System;
+using System.Xml.Serialization;
 
 public class FileManager
 {
@@ -40,6 +41,11 @@ public class FileManager
         return new ItemInfo();}
 
 
+    public static Dialogue Load(TextAsset _xml){
+        XmlSerializer serializer = new XmlSerializer(typeof(Dialogue));
+        StringReader reader = new StringReader(_xml.text);
+        Dialogue dialogue = serializer.Deserialize(reader) as Dialogue;
+        return dialogue;}
 
 
 

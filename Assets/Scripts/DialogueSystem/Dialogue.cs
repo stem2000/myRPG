@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Xml.Serialization;
-using System.IO;
 
 [XmlRoot("dialogue")]
 public class Dialogue{
@@ -12,13 +11,6 @@ public class Dialogue{
     public string npcName;
     [XmlElement("curnode")]
     public int currentNode;
-
-    public static Dialogue Load(TextAsset _xml){
-        XmlSerializer serializer = new XmlSerializer(typeof(Dialogue));
-        StringReader reader = new StringReader(_xml.text);
-        Dialogue dialogue = serializer.Deserialize(reader) as Dialogue;
-        return dialogue;}
-
 
     public string GetActualDescription(){
         return nodes[currentNode].textDesctiption;}
@@ -52,4 +44,10 @@ public class Answer{
     public int nextNode;
     [XmlElement("dialend")]
     public bool dialend;
+    [XmlAttribute("questvalue")]
+    public int questvalue;
+    [XmlElement("needquestvalue")]
+    public int needquestvalue;
+     [XmlElement("questname")]
+    public string questname;
 }

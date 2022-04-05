@@ -22,7 +22,7 @@ public class DialogueViewAdapter : MonoBehaviour
         RefreshAnswerPanel();}
 
     private void RefreshDialoguePanelFromNPC(){
-        if(dialogue.GetActualDescription() != string.Empty){
+        if(dialogue.GetActualDescription() != null){
            AddDescription();}
         AddNpcText();}  
 
@@ -42,12 +42,18 @@ public class DialogueViewAdapter : MonoBehaviour
         RefreshDialoguePanelFromNPC();
         RefreshAnswerPanel();}
 
+    
+    public void dlfAddQuestValueToPlayerPrefs(Answer answer){
+        if(answer.needquestvalue == PlayerPrefs.GetInt(answer.questname)){
+            PlayerPrefs.SetInt(answer.questname,answer.questvalue);}}
+
 
     public void RefreshAnswerPanel(){
         DestroyAnswers();
         Answer[] actualAnswers = dialogue.GetActualAnswers();
         foreach(Answer answer in actualAnswers){
-            AddAnswer(answer);}}
+            if(answer.questname == null || answer.needquestvalue == PlayerPrefs.GetInt(answer.questname)){
+                AddAnswer(answer);}}}
 
 
     public void DestroyAnswers(){

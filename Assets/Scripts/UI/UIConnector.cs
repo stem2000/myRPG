@@ -10,6 +10,7 @@ public class UIConnector : MonoBehaviour
     public DialogueViewAdapter dialogueViewAdapter;
 
     public void LoadItemsAtScrollView(){
+        scrollViewAdapter.GetComponent<GenScrollViewAnimator>().closeScrollView();
         scrollViewAdapter.LoadItems(this.gameObject.GetComponent<IItemBasicFunctional>().getIncludedItems(),this);}
 
     public void OpenDialogueViewFromPerson(){
@@ -20,6 +21,8 @@ public class UIConnector : MonoBehaviour
     public void RefreshDialogFromAnswerButton(){
         Answer currentAnswer = this.gameObject.GetComponent<AnswerItem>().answer;
         dialogueViewAdapter.AddAnswerTextToDialoguePanel(currentAnswer.textAnswer);
-        dialogueViewAdapter.dlfGoToNextNode(currentAnswer.nextNode, currentAnswer.dialend);}
+        dialogueViewAdapter.dlfGoToNextNode(currentAnswer.nextNode, currentAnswer.dialend);
+        dialogueViewAdapter.dlfAddQuestValueToPlayerPrefs(currentAnswer);}
+
 
 }
