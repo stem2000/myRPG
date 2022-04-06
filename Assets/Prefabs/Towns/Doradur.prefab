@@ -174,3 +174,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollViewAdapter: {fileID: 0}
+  dialogueViewAdapter: {fileID: 0}

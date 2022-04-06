@@ -35,7 +35,7 @@
         <npctext>Тогда нам не о чем говорить.</npctext>
         <answers>
             <answer tonode = '0'>
-                <text>Пока.</text>
+                <text>Пока.(Закончить диалог).</text>
                 <dialend>true</dialend>
             </answer>
         </answers>
@@ -44,7 +44,7 @@
         <npctext>Хорошо, можеть быть ты не такой дурак, каким выглядишь.</npctext>
         <answers>
             <answer tonode = '0'>
-                <text>Спасибо.</text>
+                <text>Спасибо.(Закончить диалог).</text>
                 <dialend>true</dialend>
             </answer>
         </answers>
@@ -54,7 +54,7 @@
         <npctext>Ну давай.</npctext>
         <answers>
             <answer tonode = '0'>
-                <text>Отойти от Костуса.</text>
+                <text>Отойти от Костуса.(Закончить диалог).</text>
                 <dialend>true</dialend>
             </answer>
         </answers>

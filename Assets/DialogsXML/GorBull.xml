@@ -9,7 +9,7 @@
                 <questname>KostusQuest1</questname>
             </answer>
             <answer tonode = '0'>
-                <text>Отойти...</text>
+                <text>Отойти...(Закончить диалог).</text>
                 <dialend>true</dialend>
             </answer>
         </answers>
@@ -18,8 +18,18 @@
         <description>Гор "Бык" слегка подался вперед.</description>
         <npctext>Забирай свои деньги и проваливай.</npctext>
         <answers>
-            <answer tonode = '0'>
-                <text>Спасибо.</text>
+            <answer tonode = '2'>
+                <text>Спасибо.(Закончить диалог).</text>
+                <dialend>true</dialend>
+            </answer>
+        </answers>
+    </node>
+     <node><!-- node 2 begin-->
+        <description>Гор "Бык" похрапывает, прислонившись к стене.</description>
+        <npctext>Хрр-рр-рр-ррр.</npctext>
+        <answers>
+            <answer tonode = '2'>
+                <text>Отойти...(Закончить диалог).</text>
                 <dialend>true</dialend>
             </answer>
         </answers>
