@@ -9,28 +9,26 @@ public class AbilityItem : MonoBehaviour
     [HideInInspector]public string pickForItem;
 
     private Ability ability;
-    private AbilityTargetLinker atLinker;
     private AbilityItemUI abilityItemUI;
+    private AbilitiesContainer abilitiesContainer;
 
 
 
     
     public void Awake(){
         abilityItemUI = gameObject.GetComponent<AbilityItemUI>();
-        this.gameObject.GetComponent<Button>().onClick.AddListener(PushAbilityToAtLinker);}
+        this.gameObject.GetComponent<Button>().onClick.AddListener(PushAbilityToContainer);}
 
 
-    public void InitializeAbilityItem(Ability ability, AbilityTargetLinker atLinker){
+    public void InitializeAbilityItem(Ability ability, AbilitiesContainer abilitiesContainer){
         this.ability = ability;
-        this.atLinker = atLinker;
+        this.abilitiesContainer = abilitiesContainer;
         textForItem = ability.GetName() + "[<color=#2338B7>" + ability.GetCastCost() + "</color>]";
         pickForItem = ability.GetPick();
         abilityItemUI.SetAbilityText(textForItem);
         abilityItemUI.SetAbilityPick(pickForItem);}
 
-
-
-    public void PushAbilityToAtLinker(){
-        atLinker.SetActiveAbility(ability);}
+    public void PushAbilityToContainer(){
+        abilitiesContainer.SetActiveAbility(ability);}
 
 }

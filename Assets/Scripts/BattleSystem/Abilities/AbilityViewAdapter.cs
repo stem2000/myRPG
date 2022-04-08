@@ -7,19 +7,20 @@ public class AbilityViewAdapter : MonoBehaviour
 
     [SerializeField] private AbilityItem abilityItemPrefab;
     [SerializeField] private RectTransform content;
-    private AbilityTargetLinker atLinker;
 
-    public void LoadAbilities(List<Ability> abilitiesList, AbilityTargetLinker atLinker){
-        this.atLinker = atLinker;
+    private AbilitiesContainer currentAbilitiesContainer;
+
+    public void LoadAbilities(List<Ability> abilitiesList, AbilitiesContainer abilitiesContainer){
+        currentAbilitiesContainer = abilitiesContainer;
         DestroyAbilities();
         foreach(Ability ability in abilitiesList){
-            AddAbilityToContent(ability);}}
+            AddAbilityToContent(ability,currentAbilitiesContainer);}}
 
 
-    public void AddAbilityToContent(Ability ability){
+    public void AddAbilityToContent(Ability ability, AbilitiesContainer battleInformer){
         AbilityItem item = GameObject.Instantiate(abilityItemPrefab);
         item.gameObject.transform.SetParent(content,false);
-        item.InitializeAbilityItem(ability,atLinker);}
+        item.InitializeAbilityItem(ability,battleInformer);}
 
     
     public void DestroyAbilities(){
