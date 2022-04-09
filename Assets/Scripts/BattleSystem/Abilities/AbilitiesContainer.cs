@@ -2,29 +2,51 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System;
 
 public class AbilitiesContainer : MonoBehaviour
 {
     [SerializeField] private BattleController battleController;
     [SerializeField]public List<Ability> abilityPrefabs;
-    [HideInInspector] public List<Ability> abilities;
+    [HideInInspector] public List<Ability> abilitiesForAbilityItem;
+    private List<Ability> activeAbilities;
     private AbilityButtonUI abilityButtonUI;
-
-    [HideInInspector] public Ability activeAbility;
     public void Start(){
         abilityButtonUI = this.gameObject.GetComponent<AbilityButtonUI>();
-        abilities.Clear();
+        activeAbilities = new List<Ability>();
+        abilitiesForAbilityItem.Clear();
         foreach(Ability ability in abilityPrefabs){
-            abilities.Add(Instantiate(ability));}}
+            abilitiesForAbilityItem.Add(Instantiate(ability));}}
 
 
-    public void SetActiveAbility(Ability ability){
-        if(battleController.ApplicabilityAbilityCheck(ability,activeAbility)){
-            activeAbility = ability;
-            abilityButtonUI.SetButtonPick(ability.GetPick());}}
+    public void PushAbilityToActiveList(Ability ability){
+        if(battleController.ApplicabilityAbilityCheck(ability,CountofAllAbilities()))
+           activeAbilities.Add(ability);
+           Debug.Log("AbilitiesListSize - " + activeAbilities.Count.ToString());}
 
-    public void CancelActiveAbility(){
-        activeAbility = null;
-        abilityButtonUI.SetDefaultButtonPick();}
+    public void TakeAbilityFromActiveList(Ability ability){
+        if(activeAbilities.Contains(ability)){
+            battleController.AbilityCancellation(ability);
+            activeAbilities.Remove(ability);}}
+
+    
+    public int CountOfAbility(Ability argAbility){
+        int count = 0;
+        foreach(Ability ability in activeAbilities){
+            if(ability.GetName().Equals(argAbility.GetName()))
+                count++;}
+        return count;}
+
+    public int CountofAllAbilities(){
+        return activeAbilities.Count;}
+
+    public List<Ability> GetAllAbilities(){
+        return activeAbilities;}
+
+    public void RemoveAllActiveAbilites(){
+        activeAbilities.Clear();}
+
+
+    
     
 }

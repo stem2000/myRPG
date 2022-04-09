@@ -6,9 +6,6 @@ using UnityEngine.Events;
 
 public class AbilityButton : MonoBehaviour
 {
-    [System.Serializable]
-    public class CancelAbilityEvent:UnityEvent<AbilitiesContainer>{}
-    [SerializeField]public CancelAbilityEvent cancelAbility;
     [SerializeField] private AbilityViewAdapter abilityView;
     private AbilitiesContainer abilitiesContainer;
     private AbilityButtonUI abilityButtonUI;
@@ -21,17 +18,10 @@ public class AbilityButton : MonoBehaviour
 
 
     public void LoadAbilitesToAbilitesView(){
-        abilityView.LoadAbilities(abilitiesContainer.abilities,this.gameObject.GetComponent<AbilitiesContainer>());}
-
-    
-    public void MakeAbilityCancellation(){
-        cancelAbility.Invoke(abilitiesContainer);}
+        abilityView.LoadAbilities(abilitiesContainer.abilitiesForAbilityItem,this.gameObject.GetComponent<AbilitiesContainer>());}
     
     private void OnClickFunction(){
-        if(abilitiesContainer.activeAbility == null){
-            LoadAbilitesToAbilitesView();}
-        else{
-           MakeAbilityCancellation();}}
+        LoadAbilitesToAbilitesView();}
 
 
 }

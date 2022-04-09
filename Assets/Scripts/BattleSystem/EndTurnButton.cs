@@ -1,18 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EndTurnButton : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public BattleController battleController;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public void Start(){
+        this.gameObject.GetComponent<Button>().onClick.AddListener(EndTurn);}
+
+    public void EndTurn(){
+        battleController.EndTurn();}
 }

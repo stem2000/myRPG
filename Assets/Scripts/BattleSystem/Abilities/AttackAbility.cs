@@ -14,4 +14,8 @@ public class AttackAbility : Ability{
         protected override void Start(){
                 base.Start();}
 
+        public void CastAttackAbility(){
+                
+        }
+
 }

@@ -42,5 +42,14 @@ public class Battler : MonoBehaviour{
         SetCpText(this.cp.ToString());
         return true;}
 
+    public bool CheckIsCpEnough(int cp){
+        if(this.cp - cp >= 0)
+            return true;
+        return false;}
+
+    public void RestoreCp(){
+        cp = 100;
+        SetCpText(cp.ToString());}
+
     
 }

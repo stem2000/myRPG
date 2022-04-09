@@ -136,6 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9840564740946ea42b715eb1b389922f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  battleController: {fileID: 0}
   abilityPrefabs:
   - {fileID: -1004949125368615983, guid: d75fb0d2f8c4e1d4492db84eaa88bd48, type: 3}
   - {fileID: -1004949125368615983, guid: 6a1cb5f6ed84c5542a3577fbeeabd27f, type: 3}
@@ -241,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.066037714, g: 0.063234225, b: 0.063234225, a: 1}
+  m_Color: {r: 0.7176471, g: 0.6117647, b: 0.6117647, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -274,6 +275,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.7169812, g: 0.6121396, b: 0.6121396, a: 0.5}
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
