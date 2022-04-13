@@ -23,7 +23,7 @@ public class AbilityItem : MonoBehaviour, IPointerClickHandler
     public void InitializeAbilityItem(Ability ability, AbilitiesContainer abilitiesContainer){
         this.ability = ability;
         this.abilitiesContainer = abilitiesContainer;
-        SetItemText(abilitiesContainer.CountOfAbility(ability));
+        SetItemText(abilitiesContainer.CountOfAbility(ability.GetId()));
         pickForItem = ability.GetPick();
         abilityItemUI.SetAbilityText(textForItem);
         abilityItemUI.SetAbilityPick(pickForItem);}
@@ -35,13 +35,13 @@ public class AbilityItem : MonoBehaviour, IPointerClickHandler
 
     public void PushAbilityToContainer(){
         abilitiesContainer.PushAbilityToActiveList(ability);
-        SetItemText(abilitiesContainer.CountOfAbility(ability));
+        SetItemText(abilitiesContainer.CountOfAbility(ability.GetId()));
         abilityItemUI.SetAbilityText(textForItem);}
 
     public void TakeAbilityFromContainer(){
-        abilitiesContainer.TakeAbilityFromActiveList(ability);
-        SetItemText(abilitiesContainer.CountOfAbility(ability));
-         abilityItemUI.SetAbilityText(textForItem);}
+        abilitiesContainer.TakeAbilityFromActiveList(ability.GetId());
+        SetItemText(abilitiesContainer.CountOfAbility(ability.GetId()));
+        abilityItemUI.SetAbilityText(textForItem);}
 
     public void OnPointerClick(PointerEventData eventData){
         if (eventData.button == PointerEventData.InputButton.Left){

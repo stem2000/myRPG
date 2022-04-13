@@ -20,22 +20,31 @@ public class AbilitiesContainer : MonoBehaviour
 
 
     public void PushAbilityToActiveList(Ability ability){
-        if(battleController.ApplicabilityAbilityCheck(ability,CountofAllAbilities()))
-           activeAbilities.Add(ability);
+        Ability abilityForActiveList = Instantiate(ability);
+        abilityForActiveList.CalculateCastCost();
+        if(battleController.ApplicabilityAbilityCheck(abilityForActiveList,CountofAllAbilities()))
+           activeAbilities.Add(abilityForActiveList);
            Debug.Log("AbilitiesListSize - " + activeAbilities.Count.ToString());}
 
-    public void TakeAbilityFromActiveList(Ability ability){
-        if(activeAbilities.Contains(ability)){
-            battleController.AbilityCancellation(ability);
-            activeAbilities.Remove(ability);}}
+    public void TakeAbilityFromActiveList(string id){
+        for(int i = activeAbilities.Count - 1; i >= 0; i--){
+            if(activeAbilities[i].GetId() == id){
+                 battleController.AbilityCancellation(activeAbilities[i]);
+                 activeAbilities.RemoveAt(i);
+                 return;}}}
 
     
-    public int CountOfAbility(Ability argAbility){
+    public int CountOfAbility(string id){
         int count = 0;
         foreach(Ability ability in activeAbilities){
-            if(ability.GetName().Equals(argAbility.GetName()))
+            if(id.Equals(ability.GetId()))
                 count++;}
         return count;}
+
+    public Ability ReturnFirstAbility(){
+        if(activeAbilities.Count != 0){
+            return activeAbilities[0];}
+        return null;}
 
     public int CountofAllAbilities(){
         return activeAbilities.Count;}

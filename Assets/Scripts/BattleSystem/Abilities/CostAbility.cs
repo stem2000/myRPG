@@ -2,17 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CostAbility : MonoBehaviour
+public class CostAbility : Ability
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private int costDecrease;
+    [SerializeField] private string abilityForAplyID;
+    [SerializeField] private int turnsBeforeAply;
+    private int playingTurn;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public override void CalculateCastCost(){
+        abilityCost = costDecrease * 5 / 2;}
+    
+    public int GetPlayingTurn(){
+        return playingTurn;}
+ 
+    public void SetPlayingTurn(int currentTurn){
+        playingTurn = currentTurn + turnsBeforeAply;}
+    
+    public int CastAbility(string abilityId,int currentTurn){
+       if(currentTurn == playingTurn && abilityForAplyID.Equals(abilityId))
+            return costDecrease;
+        return 0;}
+
+     protected override void Awake(){
+         base.Awake();}
 }
