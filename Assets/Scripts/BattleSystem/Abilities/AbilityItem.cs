@@ -31,17 +31,20 @@ public class AbilityItem : MonoBehaviour, IPointerClickHandler
     
     private void SetItemText(int abilityCount){
          textForItem = ability.GetName() + "[<color=#2338B7>" + ability.GetCastCost() + "</color>]" + 
-         " [<color=green>" + abilityCount + "</color>]";}
+         " [<color=green>" + abilityCount + "</color>]" + " [<color=red>" + ability.GetActProbability() + "</color>]";}
+
 
     public void PushAbilityToContainer(){
         abilitiesContainer.PushAbilityToActiveList(ability);
         SetItemText(abilitiesContainer.CountOfAbility(ability.GetId()));
         abilityItemUI.SetAbilityText(textForItem);}
 
+
     public void TakeAbilityFromContainer(){
         abilitiesContainer.TakeAbilityFromActiveList(ability.GetId());
         SetItemText(abilitiesContainer.CountOfAbility(ability.GetId()));
         abilityItemUI.SetAbilityText(textForItem);}
+
 
     public void OnPointerClick(PointerEventData eventData){
         if (eventData.button == PointerEventData.InputButton.Left){

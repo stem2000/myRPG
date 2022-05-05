@@ -12,13 +12,13 @@ public class DefenceAbility : Ability{
     public override int GetCastCost(){
             return abilityCost;}
 
-    public int CastDefenceAbility(){
+    public int CastDefenceAbility(int plusProbability){
             float probability = RandomGenerator.GenerateProbability();
-            float proportion = probability/abilityActuationProbability;
+            float proportion = probability/(abilityActuationProbability-plusProbability);
             if(proportion >= 1)
                 return abilityResistance;
             else{ 
-                float share = ((abilityActuationProbability-probability)/(defenceReduction*100f));
+                float share = ((abilityActuationProbability-plusProbability-probability)/(defenceReduction*100f));
                 return (int)(abilityResistance*share);}}
 
     protected override void Awake(){

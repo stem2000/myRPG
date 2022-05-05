@@ -10,13 +10,15 @@ public class UIConnector : MonoBehaviour
     public DialogueViewAdapter dialogueViewAdapter;
 
     public void LoadItemsAtScrollView(){
-        scrollViewAdapter.GetComponent<GenScrollViewAnimator>().closeScrollView();
-        scrollViewAdapter.LoadItems(this.gameObject.GetComponent<IItemBasicFunctional>().getIncludedItems(),this);}
+        UIManager.scrollViewIsOpenened = false;
+        scrollViewAdapter.LoadItems(this.gameObject.GetComponent<IItemBasicFunctional>().getIncludedItems(),this);
+        UIManager.scrollViewIsOpenened = true;}
 
     public void OpenDialogueViewFromPerson(){
         dialogueViewAdapter.LoadDialogueElements(this.gameObject.GetComponent<Person>().thisPersonDialogue);
         dialogueViewAdapter.OpenDialogView();
-        dialogueViewAdapter.StartDialogue();}
+        dialogueViewAdapter.StartDialogue();
+        UIManager.dialogueViewIsOpen = true;}
 
     public void RefreshDialogFromAnswerButton(){
         Answer currentAnswer = this.gameObject.GetComponent<AnswerItem>().answer;

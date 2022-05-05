@@ -29,11 +29,18 @@ public class Battler : MonoBehaviour{
 
     public void TakeHp(int hp){
         this.hp -= hp;
+        if(this.hp < 0)
+            this.hp = 0;
         SetHpText(this.hp.ToString());}
 
     public void AddCp(int cp){
         this.cp += cp;
         SetCpText(this.cp.ToString());}
+
+
+    public int HpInfo(){
+        return hp;}
+
 
     public bool TakeCp(int cp){
         if(this.cp - cp < 0){

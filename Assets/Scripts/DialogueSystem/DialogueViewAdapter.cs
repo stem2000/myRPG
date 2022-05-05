@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class DialogueViewAdapter : MonoBehaviour
@@ -10,6 +11,7 @@ public class DialogueViewAdapter : MonoBehaviour
     [SerializeField] private AnswerItem prefabAnwerItem;
     [SerializeField] private DialogueTextItem prefabDialogTextItem;
     private Dialogue dialogue;
+    [SerializeField] UnityEvent dvClose; 
 
 
     public void RebuildAnswerLayout(){
@@ -47,7 +49,7 @@ public class DialogueViewAdapter : MonoBehaviour
 
     
     public void dlfAddQuestValueToPlayerPrefs(Answer answer){
-        if(answer.needquestvalue == PlayerPrefs.GetInt(answer.questname)){
+        if(answer.needquestvalue == PlayerPrefs.GetInt(answer.questname)){//если questname пустая строка вернеся defaultvalue
             PlayerPrefs.SetInt(answer.questname,answer.questvalue);}
             Debug.Log("Questname - " + answer.questname + " Playerprefs - " +  PlayerPrefs.GetInt(answer.questname));}
 
@@ -83,7 +85,7 @@ public class DialogueViewAdapter : MonoBehaviour
 
     public void EndDialogue(){
         ClearDialogView();
-        this.gameObject.GetComponent<DialogueViewAnimator>().closeDialogueView();}
+        dvClose.Invoke();}
 
 
     public void AddDescription(){

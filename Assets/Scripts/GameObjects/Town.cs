@@ -7,9 +7,6 @@ public class Town : MonoBehaviour, IItemBasicFunctional
 {
     [SerializeField] private List<TownPlace> townPlaces;
 
-    public void OnMouseDown(){
-        Debug.Log("TownButton activated");
-        this.gameObject.GetComponent<UIConnector>().LoadItemsAtScrollView();}
 
     public List<Tuple<ItemInfo,UIConnector>> getIncludedItems(){
         List<Tuple<ItemInfo,UIConnector>> itemsInfo = new List<Tuple<ItemInfo,UIConnector>>();

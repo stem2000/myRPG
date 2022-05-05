@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FileManager">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAIAAAEAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Assets\Scripts\FileSystem\FileManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DialogeManager">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DialogueSystem\DialogeManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AnswerItem">
+    <Position X="15.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACACAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\DialogueSystem\AnswerItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dialogue">
+    <Position X="12.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIBAAAAAAAgAAAAAAAAAAAQQAAAAAAAIAA=</HashCode>
+      <FileName>Assets\Scripts\DialogueSystem\Dialogue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Node">
+    <Position X="10.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAECAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DialogueSystem\Dialogue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Answer">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAQAAAAAAAAEAAAACAAAAAAEAIAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DialogueSystem\Dialogue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DialogueViewAdapter">
+    <Position X="14" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAABAAAABAEABIDAEAQEASAAREAEAIABAAAAFAAQ=</HashCode>
+      <FileName>Assets\Scripts\DialogueSystem\DialogueViewAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleController">
+    <Position X="7" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AxAgAAIAQqAhgQQAICQBLgARAAAACIgBgABEAAhAAAg=</HashCode>
+      <FileName>Assets\Scripts\BattleSystem\BattleController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattlerAbilitySet">
+    <Position X="8.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAQAAAAAAAAAAAAIAAIAAAAABAAAEAAAAAAABAA=</HashCode>
+      <FileName>Assets\Scripts\BattleSystem\BattleController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleInfoAdapter">
+    <Position X="8.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCCBAAAAAAAAAAAAAABAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BattleSystem\BattleInfoAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleInfoItem">
+    <Position X="10.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\BattleSystem\BattleInfoItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleInfoItemUI">
+    <Position X="15.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAIAAAAAAAgAAAAAIAAAAAAAAAkA=</HashCode>
+      <FileName>Assets\Scripts\BattleSystem\BattleInfoItemUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Battler">
+    <Position X="21.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABBgCAAAAAQAgAAAAAAAAAAAAAAAIBJAAQAAEA=</HashCode>
+      <FileName>Assets\Scripts\BattleSystem\Battler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EndTurnButton">
+    <Position X="12.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAABAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Assets\Scripts\BattleSystem\EndTurnButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectDescriptor">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ObjectSystem\ObjectDescriptor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectLoader">
+    <Position X="5.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgACAAAAAAAAAAAAAAAAAAAAAAAEAIAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ObjectSystem\ObjectLoader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerPrefsCleaner">
+    <Position X="21.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ObjectSystem\PlayerPrefsCleaner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ScrollViewAdapter">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAAAAAAAAAAAAAAAAIAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\ScrollViewAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemView">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIIBCEAABAAAAABAAAAAAAAAAABAAAAAAgAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\UI\ItemView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ItemViewTypes">
+    <Position X="12.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAQAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\ItemView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExitButtonSV">
+    <Position X="8.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UI\ExitButtonSV.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RandomGenerator">
+    <Position X="21.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Other\RandomGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuButtons">
+    <Position X="15.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MainMenu\MenuButtons.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Town">
+    <Position X="0.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAEAAA=</HashCode>
+      <FileName>Assets\Scripts\GameObjects\Town.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TownPlace">
+    <Position X="2.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameObjects\TownPlace.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AbilitiesContainer">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAACAC0GCAAIAAAAAACAAAAAAAAAACAAAAAAAAAgAA=</HashCode>
+      <FileName>Assets\Scripts\BattleSystem\Abilities\AbilitiesContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ability">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAABAAAAAACABAAAAgAgAIABkM=</HashCode>
+      <FileName>Assets\Scripts\BattleSystem\Abilities\Ability.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbilityItem">
+    <Position X="5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAgAAAQAAEAIAAACABAQAAAAAAAAAAAAAAEQ=</HashCode>
+      <FileName>Assets\Scripts\BattleSystem\Abilities\AbilityItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AttackAbility">
+    <Position X="17.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAACAAAAAAABAAEAAEA=</HashCode>
+      <FileName>Assets\Scripts\BattleSystem\Abilities\AttackAbility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CostAbility">
+    <Position X="19.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAACIAAAACAAAIAAAAAKAAAEg=</HashCode>
+      <FileName>Assets\Scripts\BattleSystem\Abilities\CostAbility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DefenceAbility">
+    <Position X="19.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAABAAAAgAAACABAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\BattleSystem\Abilities\DefenceAbility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LuckAbility">
+    <Position X="19.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAABAAAAAAIAAAgAAAAAAAAAACAAAEg=</HashCode>
+      <FileName>Assets\Scripts\BattleSystem\Abilities\LuckAbility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbilityViewAdapter">
+    <Position X="15.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICAAACAAAAAAAAAAAAAAABAAAAAAEACAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BattleSystem\Abilities\AbilityViewAdapter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbilityItemUI">
+    <Position X="10.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAIAAAAAAAgAAAAAIAAAAAAAAAkA=</HashCode>
+      <FileName>Assets\Scripts\BattleSystem\Abilities\AbilityItemUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="ItemInfo">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAoAAAAAAAAAAFAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Assets\Scripts\ObjectSystem\ItemInfo.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="IItemBasicFunctional">
+    <Position X="4.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameObjects\Town.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

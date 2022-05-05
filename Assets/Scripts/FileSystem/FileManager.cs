@@ -35,10 +35,14 @@ public class FileManager
 
 
     public static ItemInfo ConvertJsonToItemInfo(string json){
-        if(json != String.Empty){
-            ItemInfo objectDescription = JsonUtility.FromJson<ItemInfo>(json);
-                return objectDescription;}
-        return new ItemInfo();}
+        try{
+            if(json != String.Empty){
+                ItemInfo objectDescription = JsonUtility.FromJson<ItemInfo>(json);
+                    return objectDescription;}
+            return new ItemInfo();}
+        catch(Exception e){
+            Debug.Log("<color=red>JsonConvertError: </color>FileManager => ConvertJsonToItemInfo():" + e.Message);
+            return new ItemInfo();}}
 
 
     public static Dialogue LoadXML(TextAsset _xml){

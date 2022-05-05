@@ -22,11 +22,21 @@ public class Ability: MonoBehaviour{
         return abilityPickPath;}
 
 
+    public int GetActProbability(){
+        return abilityActuationProbability;}
+
+
     public virtual int GetCastCost(){
         return abilityCost;}
 
+
     public void SetCastCost(int newCost){
         abilityCost = newCost;}
+
+
+    public void IncreaseProbability(int plustProb){
+        abilityActuationProbability += plustProb;}
+
 
     public virtual void CalculateCastCost(){}
 

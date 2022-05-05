@@ -23,8 +23,7 @@ public class AbilitiesContainer : MonoBehaviour
         Ability abilityForActiveList = Instantiate(ability);
         abilityForActiveList.CalculateCastCost();
         if(battleController.ApplicabilityAbilityCheck(abilityForActiveList,CountofAllAbilities()))
-           activeAbilities.Add(abilityForActiveList);
-           Debug.Log("AbilitiesListSize - " + activeAbilities.Count.ToString());}
+           activeAbilities.Add(abilityForActiveList);}
 
     public void TakeAbilityFromActiveList(string id){
         for(int i = activeAbilities.Count - 1; i >= 0; i--){

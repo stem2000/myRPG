@@ -9,13 +9,13 @@ public class AttackAbility : Ability{
         public override void CalculateCastCost(){
                 abilityCost = abilityDamage + (100-abilityActuationProbability)/3;}
 
-        public int CastAttackAbility(){
+        public int CastAttackAbility(int plusProbability){
                 float probability = RandomGenerator.GenerateProbability();
-                float proportion = probability/abilityActuationProbability;
+                float proportion = probability/(abilityActuationProbability-plusProbability);
                 if(proportion >= 1)
                         return abilityDamage;
                 else{ 
-                        float share = ((abilityActuationProbability-probability)/(damageReduction*100f));
+                        float share = ((abilityActuationProbability-plusProbability-probability)/(damageReduction*100f));
                         return (int)(abilityDamage*share);}}
 
         protected override void Awake(){

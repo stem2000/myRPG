@@ -12,6 +12,14 @@ public class LuckAbility : Ability
     public void SetPlayingTurn(int currentTurn){
         playingTurn = currentTurn + turnsBeforeAply;}
     
+    public override void CalculateCastCost(){
+        abilityCost = luckIncrease * 4 / 3;}
+
+
+     public int GetPlayingTurn(){
+        return playingTurn;}
+
+
     public int CastAbility(string abilityId,int currentTurn){
        if(currentTurn == playingTurn && this.abilityForAplyId == abilityId)
             return luckIncrease;

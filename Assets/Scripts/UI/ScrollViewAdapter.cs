@@ -11,7 +11,7 @@ public class ScrollViewAdapter : MonoBehaviour
     public RectTransform content;
 
     public void LoadItems(List<Tuple<ItemInfo,UIConnector>> items, UIConnector realObject){
-        this.gameObject.GetComponent<GenScrollViewAnimator>().openScrollView();
+        //this.gameObject.GetComponent<GenScrollViewAnimator>().openScrollView();
         DestroyItems();
         foreach(Tuple<ItemInfo,UIConnector> item in items){
             ItemView itemView = GameObject.Instantiate(prefab);
