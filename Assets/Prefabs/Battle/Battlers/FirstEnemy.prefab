@@ -45,7 +45,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: "\u0417\u043B\u043E\u0431\u043D\u044B\u0439 \u0443\u0440\u0437\u0443\u043B"
   abilitySets:
-  - attackAbilities: []
+  - attackAbilities:
+    - {fileID: -1004949125368615983, guid: d75fb0d2f8c4e1d4492db84eaa88bd48, type: 3}
+    - {fileID: -1004949125368615983, guid: d75fb0d2f8c4e1d4492db84eaa88bd48, type: 3}
     totalAttackDamage: 0
     defenceAbilities: []
     totalBlockedDamage: 0
@@ -54,7 +56,8 @@ MonoBehaviour:
     ultimateAbilities: []
   - attackAbilities: []
     totalAttackDamage: 0
-    defenceAbilities: []
+    defenceAbilities:
+    - {fileID: 2636041451537591135, guid: 6bc83aa079476f54883e1adcc20b02e7, type: 3}
     totalBlockedDamage: 0
     luckAbilities: []
     costAbilities: []

@@ -171,15 +171,21 @@ public class BattleController : MonoBehaviour
 
 
     private void CostAbilitiesCleaning(BattlerAbilitySet battlerAbilitySet){
+       Ability abilityForDestroy;
        for(int i = 0; i < battlerAbilitySet.costAbilities.Count; i++){
-            if(((CostAbility)battlerAbilitySet.costAbilities[i]).GetPlayingTurn() < TURNNUMBER)
-                battlerAbilitySet.costAbilities.RemoveAt(i);}}
+            if(((CostAbility)battlerAbilitySet.costAbilities[i]).GetPlayingTurn() < TURNNUMBER){
+                abilityForDestroy = battlerAbilitySet.costAbilities[i];
+                battlerAbilitySet.costAbilities.RemoveAt(i);
+                Destroy(abilityForDestroy.gameObject);}}}
 
 
     private void LuckAbilitiesCleaning(BattlerAbilitySet battlerAbilitySet){
+       Ability abilityForDestroy;
        for(int i = 0; i < battlerAbilitySet.luckAbilities.Count; i++){
-            if(((LuckAbility)battlerAbilitySet.luckAbilities[i]).GetPlayingTurn() < TURNNUMBER)
-                battlerAbilitySet.luckAbilities.RemoveAt(i);}}
+            if(((LuckAbility)battlerAbilitySet.luckAbilities[i]).GetPlayingTurn() < TURNNUMBER){
+                abilityForDestroy = battlerAbilitySet.luckAbilities[i];
+                battlerAbilitySet.luckAbilities.RemoveAt(i);
+                Destroy(abilityForDestroy.gameObject);}}}
 
 
     public void PushCostAbilitiesInfo(BattlerAbilitySet battlerAbilitySet, String name){

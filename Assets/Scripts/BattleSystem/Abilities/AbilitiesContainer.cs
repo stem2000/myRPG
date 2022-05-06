@@ -23,13 +23,18 @@ public class AbilitiesContainer : MonoBehaviour
         Ability abilityForActiveList = Instantiate(ability);
         abilityForActiveList.CalculateCastCost();
         if(battleController.ApplicabilityAbilityCheck(abilityForActiveList,CountofAllAbilities()))
-           activeAbilities.Add(abilityForActiveList);}
+           activeAbilities.Add(abilityForActiveList);
+        else 
+            Destroy(abilityForActiveList.gameObject);}
 
     public void TakeAbilityFromActiveList(string id){
+        Ability abilityToDestroy = null;
         for(int i = activeAbilities.Count - 1; i >= 0; i--){
             if(activeAbilities[i].GetId() == id){
                  battleController.AbilityCancellation(activeAbilities[i]);
+                 abilityToDestroy = activeAbilities[i];
                  activeAbilities.RemoveAt(i);
+                 Destroy(abilityToDestroy.gameObject);
                  return;}}}
 
     
@@ -52,6 +57,8 @@ public class AbilitiesContainer : MonoBehaviour
         return activeAbilities;}
 
     public void RemoveAllActiveAbilites(){
+        for(int i = 0; i < activeAbilities.Count;i++){
+            Destroy(activeAbilities[i].gameObject);}
         activeAbilities.Clear();}
 
 

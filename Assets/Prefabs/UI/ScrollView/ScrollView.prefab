@@ -468,7 +468,6 @@ GameObject:
   - component: {fileID: 2161506825112451554}
   - component: {fileID: 2161506825112451557}
   - component: {fileID: 2161506825112451556}
-  - component: {fileID: 2937698355884440562}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -577,7 +576,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2937698355884440562}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ExitButtonSV, Assembly-CSharp
         m_MethodName: closeScrollView
         m_Mode: 1
@@ -589,19 +588,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &2937698355884440562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2161506825112451558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 036f85a1fcfab6a459d4152ef5234cd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  svAnimator: {fileID: 0}
 --- !u!1 &2161506825337245681
 GameObject:
   m_ObjectHideFlags: 0
