@@ -3,10 +3,9 @@
         <description>Здоровенный громила оглядывается по сторонам чуть пошатываясь. Возможно он сильно пьян.</description>
         <npctext>Ты кто такой?</npctext>
         <answers>
-            <answer tonode = '1' questvalue = '2'>
+            <answer tonode = '1'>
                 <needquestvalue>1</needquestvalue> 
                 <text>Привет, "Бык". Я от Костуса, пришел за деньгами, которые ты ему должен.</text>
-                <questname>KostusQuest1</questname>
             </answer>
             <answer tonode = '0'>
                 <text>Отойти...(Закончить диалог).</text>
@@ -16,11 +15,17 @@
     </node>
     <node><!-- node 1 begin-->
         <description>Гор "Бык" слегка подался вперед.</description>
-        <npctext>Забирай свои деньги и проваливай.</npctext>
+        <npctext>А ты попробуй забери.</npctext>
         <answers>
-            <answer tonode = '2'>
-                <text>Спасибо.(Закончить диалог).</text>
-                <dialend>true</dialend>
+            <answer tonode = '3'>
+                <text>Сам нарвался.(Начать бой).</text>
+                <enemyname>GorBull</enemyname>
+                <altnodeifwin>4</altnodeifwin>
+                <altnodeiflose>3</altnodeiflose>
+            </answer>
+            <answer tonode = '0'>
+                <text>Может позже.(Закончить диалог).</text>
+                 <dialend>true</dialend>
             </answer>
         </answers>
     </node>
@@ -30,6 +35,28 @@
         <answers>
             <answer tonode = '2'>
                 <text>Отойти...(Закончить диалог).</text>
+                <dialend>true</dialend>
+            </answer>
+        </answers>
+    </node>
+    <node><!-- node 3 begin-->
+        <description>Гор "Бык" потирает кулаки.</description>
+        <npctext>Может в следующий раз что-то из меня выбьешь. Ах-ха-ха-ха.</npctext>
+        <answers>
+            <answer tonode = '0'>
+                <text>Уползти от места драки...(Закончить диалог).</text>
+                <dialend>true</dialend>
+            </answer>
+        </answers>
+    </node>
+    <node><!-- node 4 begin-->
+        <description>Гор "Бык" потирает кулаки.</description>
+        <npctext>Ладно, забирай свои деньги.</npctext>
+        <answers>
+            <answer tonode = '2' questvalue = '2'>
+                <text>Забрать деньги...(Закончить диалог).</text>
+                <questname>KostusQuest1</questname>
+                <needquestvalue>1</needquestvalue>
                 <dialend>true</dialend>
             </answer>
         </answers>

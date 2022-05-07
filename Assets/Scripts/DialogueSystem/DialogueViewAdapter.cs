@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine;
+using System;
 
 public class DialogueViewAdapter : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class DialogueViewAdapter : MonoBehaviour
     [SerializeField] private AnswerItem prefabAnwerItem;
     [SerializeField] private DialogueTextItem prefabDialogTextItem;
     private Dialogue dialogue;
+    private String personID;
     [SerializeField] UnityEvent dvClose; 
 
 
@@ -19,10 +21,12 @@ public class DialogueViewAdapter : MonoBehaviour
     public void OpenDialogView(){
         this.gameObject.GetComponent<DialogueViewAnimator>().openDialogueView();}
 
-    public void LoadDialogueElements(Dialogue dialogue){
-        this.dialogue = dialogue;}
+    public void LoadDialogueElements(Dialogue dialogue, string personID){
+        this.dialogue = dialogue;
+        this.personID = personID;}
 
     public void StartDialogue(){
+        dialogue.currentNode = PlayerPrefs.GetInt(personID);
         RefreshDialoguePanelFromNPC();
         RefreshAnswerPanel();}
 
@@ -39,9 +43,16 @@ public class DialogueViewAdapter : MonoBehaviour
         dialogueTI.InitializeDialogueTextItem("\t" + "Я: " + answerText );}
 
 
-    public void dlfGoToNextNode(int nextNode,bool dialend){
-        dialogue.currentNode = nextNode;
-        if(dialend == true){
+    public void dlfGoToNextNode(Answer answer){
+        dialogue.currentNode = answer.nextNode;
+        PlayerPrefs.SetInt(personID,dialogue.currentNode);
+        dlfAddQuestValueToPlayerPrefs(answer);
+        if(!String.IsNullOrEmpty(answer.enemyname)){
+             dvClose.Invoke();
+             GiveInfoToBattleConnector(answer);
+             LoadScene.GoToScene(3);
+             return;}
+        if(answer.dialend == true){
             EndDialogue();
             return;}
         RefreshDialoguePanelFromNPC();
@@ -108,5 +119,12 @@ public class DialogueViewAdapter : MonoBehaviour
         AnswerItem answerItem = GameObject.Instantiate(prefabAnwerItem);
         answerItem.gameObject.transform.SetParent(answersTextContent,false);
         answerItem.InitializeAnwerItem(answer);}
+
+
+    public void GiveInfoToBattleConnector(Answer answer){
+        BattleDialogueConnector.personID = this.personID;
+        BattleDialogueConnector.altNodeIfLose = answer.altnodeiflose;
+        BattleDialogueConnector.altNodeIfWin = answer.altnodeifwin;
+        BattleDialogueConnector.enemyName = answer.enemyname;}
 }
 

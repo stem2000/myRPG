@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 {
     public GameObject menuPanel;
     public GameObject settingsPanel;
+    public GameObject characterPanel;
     public Animator svAnimator;
     public DialogueViewAnimator dvAnimator;
     public static bool scrollViewIsOpenened = false;
@@ -27,6 +28,13 @@ public class UIManager : MonoBehaviour
 
     public void CloseSettingsMenu(){
         settingsPanel.gameObject.SetActive(false);}
+
+
+    public void OpenCharacterMenu(){
+        characterPanel.gameObject.SetActive(true);}
+
+    public void CloseCharacterMenu(){
+        characterPanel.gameObject.SetActive(false);}
 
 
     public void FixedUpdate(){

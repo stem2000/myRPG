@@ -84,7 +84,9 @@ public class BattleController : MonoBehaviour
                 PLAYERISWINNER = true;
                 PushEndBattlePhrase("Игрок победил.");}
             else{
-                PushEndBattlePhrase("Игрок победил.");}
+                PLAYERISWINNER = false;
+                PushEndBattlePhrase("Игрок проиграл.");}
+            BattleDialogueConnector.SetAltNode(PLAYERISWINNER);
             endBattlePanel.gameObject.SetActive(true);}}
 
 

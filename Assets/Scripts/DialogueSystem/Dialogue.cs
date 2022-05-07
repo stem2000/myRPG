@@ -50,4 +50,10 @@ public class Answer{
     public int needquestvalue;
      [XmlElement("questname")]
     public string questname;
+    [XmlElement("enemyname")]
+    public string enemyname;
+    [XmlElement("altnodeifwin")]
+    public int altnodeifwin;
+    [XmlElement("altnodeiflose")]
+    public int altnodeiflose;
 }

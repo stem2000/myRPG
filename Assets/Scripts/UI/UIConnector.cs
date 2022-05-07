@@ -15,7 +15,7 @@ public class UIConnector : MonoBehaviour
         UIManager.scrollViewIsOpenened = true;}
 
     public void OpenDialogueViewFromPerson(){
-        dialogueViewAdapter.LoadDialogueElements(this.gameObject.GetComponent<Person>().thisPersonDialogue);
+        dialogueViewAdapter.LoadDialogueElements(this.gameObject.GetComponent<Person>().thisPersonDialogue, this.gameObject.GetComponent<ObjectDescriptor>().objectDescription.id);
         dialogueViewAdapter.OpenDialogView();
         dialogueViewAdapter.StartDialogue();
         UIManager.dialogueViewIsOpen = true;}
@@ -23,8 +23,7 @@ public class UIConnector : MonoBehaviour
     public void RefreshDialogFromAnswerButton(){
         Answer currentAnswer = this.gameObject.GetComponent<AnswerItem>().answer;
         dialogueViewAdapter.AddAnswerTextToDialoguePanel(currentAnswer.textAnswer);
-        dialogueViewAdapter.dlfGoToNextNode(currentAnswer.nextNode, currentAnswer.dialend);
-        dialogueViewAdapter.dlfAddQuestValueToPlayerPrefs(currentAnswer);}
+        dialogueViewAdapter.dlfGoToNextNode(currentAnswer);}
 
 
 }
