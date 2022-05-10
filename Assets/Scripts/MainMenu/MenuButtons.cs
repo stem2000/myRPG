@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
-    public void ToPlay(){ 
-       LoadScene.GoToScene(2);}
+    public void ToStartNew(){ 
+        PlayerPrefs.DeleteAll();
+        LoadScene.GoToScene(2);}
+
+
+    public void ToLoad(){ 
+        LoadScene.GoToScene(2);}
 
     public void ToExit(){ 
         Application.Quit();}

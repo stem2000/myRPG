@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using UnityEngine.Events;
+using UnityEngine.UI;
 public class BattleController : MonoBehaviour
 {
     private int PLAYERMAXATTACKABILITIES = 2;
@@ -17,8 +17,8 @@ public class BattleController : MonoBehaviour
     private bool PLAYERISWINNER = false;
     public Battler player;
     public Battler playerOponnent;
-
-    public EnemySets EnemySets; 
+    [SerializeField]private List<NameToEnemySet> EnemyDict; 
+    private EnemySets EnemySets;
     public List<AbilitiesContainer> playerAbilitiesContainers;
     private BattlerAbilitySet playerAbilitiesInfo;
     private BattlerAbilitySet opponenAbilitiesInfo;
@@ -32,7 +32,15 @@ public class BattleController : MonoBehaviour
     void Start(){
         playerAbilitiesInfo = new BattlerAbilitySet();
         opponenAbilitiesInfo = new BattlerAbilitySet();
+        LoadPlayerOpponent();
         PushStartPhrase();}
+
+    public void LoadPlayerOpponent(){
+        foreach(NameToEnemySet pair in EnemyDict){
+            if(pair.name == BattleDialogueConnector.enemyName){
+                EnemySets = pair.set;}}
+        var opponentPick = playerOponnent.GetComponent<Image>();
+        opponentPick.sprite = Resources.Load<Sprite>(BattleDialogueConnector.enemyName);}
 
 
     public bool ApplicabilityAbilityCheck(Ability abilityForAply,int thisAbilityCount){
@@ -177,8 +185,7 @@ public class BattleController : MonoBehaviour
        for(int i = 0; i < battlerAbilitySet.costAbilities.Count; i++){
             if(((CostAbility)battlerAbilitySet.costAbilities[i]).GetPlayingTurn() < TURNNUMBER){
                 abilityForDestroy = battlerAbilitySet.costAbilities[i];
-                battlerAbilitySet.costAbilities.RemoveAt(i);
-                Destroy(abilityForDestroy.gameObject);}}}
+                battlerAbilitySet.costAbilities.RemoveAt(i);}}}
 
 
     private void LuckAbilitiesCleaning(BattlerAbilitySet battlerAbilitySet){
@@ -186,8 +193,7 @@ public class BattleController : MonoBehaviour
        for(int i = 0; i < battlerAbilitySet.luckAbilities.Count; i++){
             if(((LuckAbility)battlerAbilitySet.luckAbilities[i]).GetPlayingTurn() < TURNNUMBER){
                 abilityForDestroy = battlerAbilitySet.luckAbilities[i];
-                battlerAbilitySet.luckAbilities.RemoveAt(i);
-                Destroy(abilityForDestroy.gameObject);}}}
+                battlerAbilitySet.luckAbilities.RemoveAt(i);}}}
 
 
     public void PushCostAbilitiesInfo(BattlerAbilitySet battlerAbilitySet, String name){

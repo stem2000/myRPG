@@ -3,9 +3,10 @@
         <description>Здоровенный громила оглядывается по сторонам чуть пошатываясь. Возможно он сильно пьян.</description>
         <npctext>Ты кто такой?</npctext>
         <answers>
-            <answer tonode = '1'>
+            <answer tonode = '1' questvalue = '1'>
                 <needquestvalue>1</needquestvalue> 
                 <text>Привет, "Бык". Я от Костуса, пришел за деньгами, которые ты ему должен.</text>
+                <questname>KostusQuest1</questname>
             </answer>
             <answer tonode = '0'>
                 <text>Отойти...(Закончить диалог).</text>

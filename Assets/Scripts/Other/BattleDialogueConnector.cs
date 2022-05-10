@@ -13,3 +13,10 @@ public class BattleDialogueConnector : MonoBehaviour
             PlayerPrefs.SetInt(personID,altNodeIfWin);}
         else{
             PlayerPrefs.SetInt(personID,altNodeIfLose);}}}
+
+
+[Serializable]
+public class NameToEnemySet{
+    public String name;
+    public EnemySets set;
+}

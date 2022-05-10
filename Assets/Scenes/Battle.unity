@@ -1723,7 +1723,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 959210586}
   playerOponnent: {fileID: 886935398}
-  EnemySets: {fileID: 4973204704922603731, guid: c2802046bcd38fb43aaf364fa8df9819, type: 3}
+  EnemyDict:
+  - name: GorBull
+    set: {fileID: 4973204704922603731, guid: 7803c74f48661d2498388e5c531ffdb2, type: 3}
   playerAbilitiesContainers:
   - {fileID: 507320746}
   - {fileID: 1401557685}
